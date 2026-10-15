@@ -1,32 +1,74 @@
-# Data Visualization Guidance
+# Data Visualization Guidance (Draft)
 
-Welcome to the official repository for the Census Bureau’s Data Visualization Guidance. This resource provides comprehensive design and technical support for a wide range of visualization types and components, ensuring our data communication remains agile, modern, and high-quality.
+Welcome to the working repository for our Capstone Data Visualization Guidance. This space is used to explore ideas, test components, and develop draft guidance as part of our ongoing capstone projects.
+
+Important:
+This repository and any related content are for draft, exploratory, and internal development purposes only.
+It is not an official U.S. government site and should not be treated as finalized Census Bureau guidance.
 
 ---
 
 ## 🎯 Purpose
-The existing Data Visualization Standards Beta website is now obsolete. This repository serves as the modernized replacement, providing a flexible framework that supports developers from initial design through final review. 
+This repository supports the development of modern, flexible data‑visualization guidance.  
+Our goal is to document best practices, evaluate new design approaches, and experiment with tools and techniques that may inform future standards.
 
-Unlike rigid constraints, this guidance is intended to **inform and empower** the design process. It aligns with proposed updates to the Statistical Quality Standards while leaving room for creative innovation and the adoption of new technologies.
+Each draft guidance page may include:
 
-Each guidance page includes:
-* **Best Practices:** Essential design elements to include.
-* **Pitfalls:** Common mistakes to avoid.
-* **Technical Tips:** Implementation guidance for various platforms.
+- Best practices and recommended design patterns  
+- Common pitfalls or issues to avoid  
+- Technical notes or implementation tips for different platforms  
+- Examples, prototypes, or experimental visual components  
+
+This is a living workspace—content will evolve as our capstone projects progress.
 
 ## 🛠 Management
-This guidance was developed by the **Methods and Standards (M&S) Council’s Data Visualization Working Group** and maintained by the **Quality Program Staff**
-
-As a living document, this content will evolve alongside data visualization innovation. The Working Group collaborates directly with developers to identify emerging needs and ensure the Bureau stays at the forefront of the field.
+This work is developed collaboratively by capstone project contributors, with support and review from subject‑matter mentors.  
+Because this is an exploratory environment, content may shift rapidly as ideas are tested, refined, or replaced.
 
 ## 🤝 Contributing
-We welcome feedback, suggestions, and updates to keep this guidance current and relevant for all developers.
+Feedback and contributions are welcome as part of the official capstone development process.
 
-If you would like to contribute:
-* Report Issues & Feature Requests: Please submit an Issue in this repository describing the proposed change, bug, or new visualization component.
-* Propose Changes: For direct updates to code, documentation, or design guidance, open a Pull Request detailing your modifications for review by the Working Group.
+Capstone team members can
+
+- **Open an Issue** to suggest changes, identify bugs, or request new components  
+- **Submit a Pull Request** for updates to documentation, prototypes, or draft guidance  
+
+All contributions will be reviewed as part of the project workflow.
+
 
 ---
 
 ### 📬 Contact
-For questions regarding specific standards or to suggest a new component, please open an **Issue** in this repository or contact the Quality Program at BOC.Quality@census.gov.
+For questions or suggestions, please open an Issue in this repository or reach out to the project team.
+
+
+
+# Capstone Data Visualization Guidance (Draft)
+
+Welcome to the working repository for our **Capstone Data Visualization Guidance**.  
+This space is used to explore ideas, test components, and develop draft guidance as part of our ongoing capstone projects.
+
+**Important:**  
+This repository and any related content are **for draft, exploratory, and internal development purposes only**.  
+It is **not an official U.S. government site** and should not be treated as finalized Census Bureau guidance.
+
+---
+
+## Purpose
+
+This repository supports the development of modern, flexible data‑visualization guidance.  
+Our goal is to document best practices, evaluate new design approaches, and experiment with tools and techniques that may inform future standards.
+
+Each draft guidance page may include:
+
+- Best practices and recommended design patterns  
+- Common pitfalls or issues to avoid  
+- Technical notes or implementation tips for different platforms  
+- Examples, prototypes, or experimental visual components  
+
+This is a living workspace—content will evolve as our capstone projects progress.
+
+
+
+
+---
