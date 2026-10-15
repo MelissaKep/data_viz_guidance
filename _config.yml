@@ -1,5 +1,7 @@
+# You will need to change url and potentially baseurl after cloning repository and trying to run the site from your account. Remember to changeback to the original url and baseurl before pushing revisions.
+
 title:  Data Visualization Guidance
-description: Draft uidance developed to help devopers create high-quality data visualization.
+description: Draft guidance developed to help devopers create high-quality data visualization.
 url: "https://emolfino-census.github.io/"
 baseurl: "/data_viz_guidance"
 remote_theme: pages-themes/cayman@v0.2.0
