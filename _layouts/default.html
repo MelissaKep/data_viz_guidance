@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+<link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+    
+    <style>
+      /* Sidebar styles that complement Cayman */
+      body { margin-left: 240px; background-color: #fff; }
+      
+      .custom-sidebar {
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 220px;
+        height: 100%;
+        background-color: #f4f7f6;
+        border-right: 1px solid #e5e5e5;
+        padding: 30px 20px;
+        z-index: 1000;
+        overflow-y: auto;
+      }
+
+      .custom-sidebar h3 { font-size: 1.1rem; color: #159957; margin-bottom: 20px; text-transform: uppercase; letter-spacing: 1px; }
+      .custom-sidebar ul { list-style: none; margin: 0; padding: 0; }
+      .custom-sidebar li { margin-bottom: 15px; }
+      .custom-sidebar a { text-decoration: none; color: #1e6bb8; font-size: 0.95rem; }
+      .custom-sidebar a:hover { text-decoration: underline; }
+      
+      .category-title { color: #2e3532; font-weight: bold; display: block; margin-top: 25px; margin-bottom: 8px; font-size: 0.9rem; }
+      .sub-menu { margin-left: 15px !important; margin-top: 5px !important; }
+
+      /* Horizontal Tag Bar Styles */
+      .tag-bar {
+        background-color: #f9f9f9;
+        border-bottom: 1px solid #eee;
+        padding: 10px 20px;
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+      }
+      .tag-bar-label {
+        font-size: 0.8rem;
+        font-weight: bold;
+        color: #606c71;
+        margin-right: 15px;
+        text-transform: uppercase;
+      }
+      .tag-link {
+        display: inline-block;
+        background: #159957;
+        color: #fff !important;
+        padding: 4px 12px;
+        border-radius: 3px;
+        margin-right: 8px;
+        font-size: 0.75rem;
+        font-weight: bold;
+        text-transform: uppercase;
+        text-decoration: none !important;
+        transition: background 0.2s;
+      }
+      .tag-link:hover { background: #1e6bb8; }
+
+      /* Responsiveness for mobile */
+      @media (max-width: 800px) {
+        body { margin-left: 0; }
+        .custom-sidebar { position: relative; width: 100%; height: auto; border-right: none; border-bottom: 1px solid #e5e5e5; }
+        .main-content { padding: 2rem 1rem; }
+        .tag-bar { justify-content: center; }
+      }
+    </style>
+  </head>
+  <body>
+
+    <div class="custom-sidebar">
+      <h3>Menu</h3>
+      <ul>
+        <li><a href="{{ site.baseurl }}/" style="font-weight: bold;">Home</a></li>
+        
+        {% for category in site.navigation %}
+          <li>
+            <span class="category-title">{{ category.title }}</span>
+            <ul class="sub-menu">
+              {% for link in category.sub_pages %}
+                <li>
+                  <a href="{{ site.baseurl }}/{{ link.url }}.html">{{ link.title }}</a>
+                </li>
+              {% endfor %}
+            </ul>
+          </li>
+        {% endfor %}
+      </ul>
+    </div>
+
+    <header class="page-header" role="banner">
+      <h1 class="project-name">{{ site.title | default: site.github.repository_name }}</h1>
+      <h2 class="project-tagline">{{ site.description | default: site.github.project_tagline }}</h2>
+    </header>
+
+    <!-- STEP 3: Horizontal Tag Bar under Banner -->
+    <nav class="tag-bar">
+  <span class="tag-bar-label">Explore Tags:</span>
+  
+  {% comment %} 
+    Initialize an empty array and cleanly concatenate every page's tags to it.
+  {% endcomment %}
+  {% assign all_tags = "" | split: "" %}
+  
+  {% for p in site.pages %}
+    {% if p.tags %}
+      {% assign all_tags = all_tags | concat: p.tags %}
+    {% endif %}
+  {% endfor %}
+  
+  {% comment %} 
+    Now deduplicate and sort the cleanly flattened array.
+  {% endcomment %}
+  {% assign all_tags = all_tags | uniq | sort %}
+  
+  {% for tag_name in all_tags %}
+    {% if tag_name != "" and tag_name != nil %}
+      <a href="{{ site.baseurl }}/tags/{{ tag_name | slugify }}/" class="tag-link">
+        {{ tag_name }}
+      </a>
+    {% endif %}
+  {% endfor %}
+</nav>
+
+    <main id="content" class="main-content" role="main">
+      
+      <!-- Individual Page Tags (Optional: shows tags specific to this page) -->
+      {% if page.tags %}
+        <div class="page-tags" style="margin-bottom: 20px; font-style: italic; font-size: 0.9rem;">
+          Tagged as: {{ page.tags | join: ", " }}
+        </div>
+      {% endif %}
+
+      {{ content }}
+      
+      <footer class="site-footer">
+        <span class="site-footer-owner">Site maintained by the Quality Program Staff</span>
+      </footer>
+    </main>
+  </body>
+</html>

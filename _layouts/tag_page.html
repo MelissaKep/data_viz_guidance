@@ -1,0 +1,40 @@
+---
+layout: default
+---
+
+<div class="tag-archive">
+  <h1 class="tag-title">Pages tagged with: <span style="color: #159957;">{{ page.tag }}</span></h1>
+  <hr>
+
+  <ul class="tag-results-list" style="list-style: none; margin: 0; padding: 0;">
+    {% comment %} 
+      Loop through every page in the site, 
+      filtering for those that include this specific tag 
+    {% endcomment %}
+    {% for item in site.pages %}
+      {% if item.tags contains page.tag %}
+        <li style="margin-bottom: 30px; border-bottom: 1px solid #eee; padding-bottom: 20px;">
+          <h2 style="margin-bottom: 5px;">
+            <a href="{{ item.url | relative_url }}" style="color: #1e6bb8; text-decoration: none;">
+              {{ item.title | default: item.url }}
+            </a>
+          </h2>
+
+          <p style="color: #606c71; font-size: 0.95rem; line-height: 1.5;">
+            {% if item.description and item.description != "" %}
+              {{ item.description }}
+            {% elsif item.excerpt %}
+              {{ item.excerpt | strip_html | truncatewords: 30 }}
+            {% else %}
+              {{ item.content | strip_html | truncatewords: 30 }}
+            {% endif %}
+            </p>
+          
+          <a href="{{ item.url | relative_url }}" style="font-size: 0.85rem; font-weight: bold; color: #159957;">
+            Read more &rarr;
+          </a>
+        </li>
+      {% endif %}
+    {% endfor %}
+  </ul>
+</div>

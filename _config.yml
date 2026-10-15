@@ -1,0 +1,107 @@
+title:  Data Visualization Guidance
+description: Guidance developed by the U.S. Census Bureau to help devopers create high-quality data visualization.
+url: "https://github.it.census.gov"
+baseurl: "/pages/molfi001/data_viz_guidance"
+remote_theme: pages-themes/cayman@v0.2.0
+plugins:
+  - jekyll-remote-theme
+  - jekyll-include-cache
+
+# This ensures Jekyll looks for your local /_layouts folder first
+include: [_layouts]
+
+# Custom navigation data
+
+navigation:
+  - title: Visualization Types
+    sub_pages:
+      - title: Area Chart
+        url: areachart
+      - title: Bar Chart
+        url: barchart
+      - title: Boxplot
+        url: boxplot
+      - title: Bubble Chart
+        url: bubblechart
+      - title: Choropleth Map
+        url: choroplethmap
+      - title: Donut Chart
+        url: donutchart
+      - title: Dot Distribution Map
+        url: dotdistributionmap
+      - title: Dot Plot Chart
+        url: dotplotchart
+      - title: Histogram
+        url: histogram
+      - title: Interactive Chart
+        url: interactivechart
+      - title: Line Graph
+        url: linegraph
+      - title: Lollipop Charts
+        url: lollipopcharts
+      - title: Micromap
+        url: micromap
+      - title: Pie Chart
+        url: piechart
+      - title: Population Pyramid
+        url: populationpyramid
+      - title: Proportional Symbol Map
+        url: proportionalsymbolmap
+      - title: Sankey Diagram
+        url: sankeydiagram
+      - title: Scatter Plot
+        url: scatterplot
+      - title: Slope Diagram
+        url: slopediagram
+      - title: Stacked Area Chart
+        url: stackedareachart
+      - title: Stacked Bar Chart
+        url: stackedbarchart
+      - title: Tables
+        url: table
+      - title: Tree Map
+        url: treemap
+
+
+  - title: Components
+    sub_pages:
+      - title: 508 Compliance
+        url: 508
+      - title: Agency Logo
+        url: logo
+      - title: Axes
+        url: axes
+      - title: Axes - Dual or Double-Y
+        url: axesdual
+      - title: Color
+        url: color
+      - title: Comparing Data and Values
+        url: comparison
+      - title: Grids and Gridlines
+        url: grid
+      - title: Legends
+        url: legend
+      - title: Map Layout
+        url: maplayout
+      - title: Mobile Design for Interactive Visualizations
+        url: mobiledesign
+      - title: Nested or Non-Mutually Exclusive Categories
+        url: nested
+      - title: Notes
+        url: note
+      - title: Scale Bar
+        url: scalebar
+      - title: Small Multiples
+        url: smallmultiples
+      - title: Sources
+        url: source
+      - title: Titles and Subtitles
+        url: title
+      - title: Typography
+        url: typography
+      - title: Visualizing Uncertainty
+        url: uncertainty
+  - title: Additional Information
+    sub_pages:
+      - title: References
+        url: references
