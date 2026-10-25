@@ -131,289 +131,107 @@ This example provides a demonstration of the following requirements:
 
 ## Developer Implementation
 
-The examples below retrieve 2024 ACS 5-Year Estimates for median household
-income (Table B19013), join the estimates to county boundary polygons, and
-create a choropleth map. Both examples use real public Census data and require
-internet access. Review the output, data vintage, table metadata, class
-breaks, and uncertainty before publication.
+The Python example retrieves county-level educational attainment estimates from the 2019 ACS Five-Year Estimates API, joins the estimates to county boundary polygons, and creates a static choropleth map.
 
-These examples are intended as detailed starting points. Package versions,
-network availability, and Census endpoints can change, so run and validate
-the code in the target environment before publishing it as an approved example.
+The five-year estimates represent the 2015–2019 period. They should not be interpreted as estimates for 2019 alone.
+
+The implementation uses public Census data and Census cartographic boundary files. It requires internet access to retrieve the data and geographic boundaries.
+
+The example is intended as a starting point for developers. Before publishing a map, verify the source data, geographic join, classification thresholds, missing-data treatment, and visual output in the target environment.
 
 ### Data Preparation
 
-Both examples use the following fields:
+The implementation uses the following data fields and geographic information:
 
-- **Geographic identifier:** county GEOID
-- **Measure:** median household income estimate
-- **Uncertainty:** ACS margin of error, where retrieved
-- **Geographic boundaries:** matching county/county-equivalent polygons
-- **Reference period:** 2024 ACS 5-Year Estimates
+- **Geographic identifier:** Five-character county GEOID, constructed from the state and county FIPS codes.
+- **Population denominator:** ACS estimate for the population age 25 and older.
+- **Educational attainment numerator:** Sum of the estimates for bachelor's, master's, professional school, and doctoral degrees.
+- **Measure:** Percentage of the population age 25 and older with a bachelor's degree or higher.
+- **Geographic boundaries:** 2019 Census county and county-equivalent cartographic boundary polygons.
+- **Reference period:** 2015–2019 ACS Five-Year Estimates.
 
-The join should use geographic identifiers, not names alone. Missing estimates
-must remain missing and should be visually distinguished from low values.
+The percentage is calculated as:
 
-### Python
+`(Population with a bachelor's degree or higher / Total population age 25 and older) × 100`
 
-Install the dependencies if needed:
+The geographic join uses GEOID rather than county names alone. This helps avoid incorrect matches between similarly named places.
+
+Missing or invalid estimates should remain missing. They should not be converted to zero or interpreted as evidence of low educational attainment.
+
+### Python Implementation
+
+Install the required dependencies:
 
 ```bash
-pip install pandas geopandas matplotlib requests mapclassify
+pip install pandas geopandas matplotlib requests shapely pyogrio
 ```
 
-```python
-# -------------------------------------------------------------------
-# CHOROPLETH MAP: Median household income by U.S. county
-# Data source: U.S. Census Bureau, 2024 ACS 5-Year Estimates, table B19013
-#
-# Purpose:
-#   1. Download county-level median household income estimates from the
-#      Census API.
-#   2. Download county boundary geometries from the Census TIGER/Line
-#      cartographic boundary files.
-#   3. Join the estimate data to the county geometries using geographic
-#      identifiers (state + county FIPS codes).
-#   4. Draw a choropleth map with a clear title, legend, and source note.
-#
-# Important:
-#   - This example uses live public Census data and requires internet access.
-#   - ACS 5-year estimates describe a 5-year period; they are not estimates
-#     for a single calendar year alone.
-#   - The code deliberately leaves missing estimates as missing. It does
-#     not replace them with zero.
-#   - Run this code in an environment where geopandas, pandas, matplotlib,
-#     requests, and mapclassify are installed.
-# -------------------------------------------------------------------
+The Python implementation performs the following steps:
 
-# If needed, install dependencies in your environment:
-# pip install pandas geopandas matplotlib requests mapclassify
+1. Retrieves ACS educational attainment estimates through the Census API.
+2. Downloads the matching 2019 county and state boundary files.
+3. Constructs county GEOIDs and joins the estimates to the geographic polygons.
+4. Calculates the percentage of the population age 25 and older with a bachelor's degree or higher.
+5. Assigns counties to the five fixed percentage classes or the unavailable-data category.
+6. Draws county fills and state boundaries.
+7. Uses separate projections for the contiguous United States, Alaska, and Hawaii.
+8. Positions Alaska and Hawaii in separate inset panels so they do not overlap the main map.
+9. Adds inset borders, scale bars, a title, legend, and source notes.
+10. Exports a high-resolution PNG map and a CSV containing county-level estimates and map categories.
 
-import io
-import zipfile
-from pathlib import Path
+The code also includes checks for unexpected Census API responses and handles county-name columns to prevent merge-related naming conflicts.
 
-import geopandas as gpd
-import matplotlib.pyplot as plt
-import pandas as pd
-import requests
+Use the complete Python script in the accompanying code example. The output files are:
 
-# ---------------------------
-# 1. Define the data vintage
-# ---------------------------
+- `bachelors_degree_choropleth_2015_2019.png`
+- `bachelors_degree_county_data_2015_2019.csv`
 
-# The Census API dataset identifier for the 2024 ACS 5-Year Estimates.
-ACS_YEAR = 2024
+### Reproducibility and Adaptation of the Data and Chart
 
-# Table B19013 contains median household income in the past 12 months,
-# in inflation-adjusted dollars as defined by the ACS table documentation.
-TABLE_VARIABLE = "B19013_001E"
+The example can be adapted to other ACS indicators and geographic levels, but developers should review the data definition, reference period, geography, and classification method before making changes.
 
-# This API endpoint returns ACS 5-year estimates for the selected vintage.
-# The "for=county:*" query requests all counties and county-equivalent areas.
-acs_url = (
-    f"https://api.census.gov/data/{ACS_YEAR}/acs/acs5"
-    f"?get=NAME,{TABLE_VARIABLE}&for=county:*"
-)
+**Data source and vintage**
 
-# Make the HTTP request and fail clearly if the endpoint returns an error.
-response = requests.get(acs_url, timeout=60)
-response.raise_for_status()
+The example uses 2019 ACS Five-Year Estimates and 2019 county boundaries to represent the 2015–2019 period. When adapting the code to a different period, update the ACS endpoint, boundary files, source note, and any related metadata together.
 
-# The Census API returns JSON as a list:
-#   first row = column headers
-#   remaining rows = data records
-api_rows = response.json()
-headers = api_rows[0]
-income = pd.DataFrame(api_rows[1:], columns=headers)
+**Changing the measure**
 
-# ---------------------------
-# 2. Clean and type the data
-# ---------------------------
+To map another educational attainment measure, select the appropriate ACS table variables and confirm that the numerator and denominator represent the intended population. Do not reuse the current formula without verifying the definitions of the replacement variables.
 
-# Rename columns to readable names for later plotting and joining.
-income = income.rename(
-    columns={
-        "NAME": "county_name",
-        TABLE_VARIABLE: "median_household_income",
-        "state": "STATEFP",
-        "county": "COUNTYFP",
-    }
-)
+**Classification and legend**
 
-# API estimates are returned as strings. Convert the estimate to numeric.
-# Any non-numeric or missing values become NaN, not zero.
-income["median_household_income"] = pd.to_numeric(
-    income["median_household_income"], errors="coerce"
-)
+The five numeric classes are fixed to match this example. If the measure or analytical question changes, reassess the class thresholds. Natural Breaks, Equal Interval, and Quantile classification methods may produce different geographic patterns, so select a method that fits the data and explain the choice.
 
-# County identifiers must remain strings so leading zeros are preserved.
-income["STATEFP"] = income["STATEFP"].astype(str).str.zfill(2)
-income["COUNTYFP"] = income["COUNTYFP"].astype(str).str.zfill(3)
+Keep class intervals non-overlapping and ensure that the classes cover the valid range of the measure. Display missing estimates separately from valid numeric values.
 
-# Build the five-character county FIPS key used to join to boundary data.
-income["GEOID"] = income["STATEFP"] + income["COUNTYFP"]
+**Color and accessibility**
 
-# Quick quality checks help catch unexpected API results before mapping.
-print(f"ACS rows returned: {len(income):,}")
-print(f"Unique county GEOIDs: {income['GEOID'].nunique():,}")
-print(f"Missing income estimates: {income['median_household_income'].isna().sum():,}")
+The sequential palette communicates an ordered quantitative measure. When adapting the colors, preserve a clear progression between lower and higher values and verify that the classes remain distinguishable. The missing-data color should remain visually separate from the quantitative scale.
 
-# ---------------------------
-# 3. Download county borders
-# ---------------------------
+**Geographic layout**
 
-# Use Census cartographic boundary files for a lighter-weight map.
-# The 2024 county file contains county/county-equivalent polygons.
-# If the endpoint or file name changes, consult the TIGER/Line download page.
-boundary_url = (
-    "https://www2.census.gov/geo/tiger/GENZ2024/shp/"
-    "cb_2024_us_county_5m.zip"
-)
+The contiguous United States, Alaska, and Hawaii use separate map axes and projections. If the geography or figure size changes, verify the placement of all map panels, the legend, the title, and source notes. Coordinate axes are hidden so that easting and northing values do not distract from the thematic map.
 
-boundary_response = requests.get(boundary_url, timeout=120)
-boundary_response.raise_for_status()
+The inset scale bars should be checked against the final projections and extents before publication.
 
-# GeoPandas can read a shapefile directly from a zip archive held in memory.
-boundary_zip = zipfile.ZipFile(io.BytesIO(boundary_response.content))
-shp_name = next(
-    name for name in boundary_zip.namelist() if name.endswith(".shp")
-)
+**Missing data and geographic comparability**
 
-# Extract to a temporary folder because GDAL/GeoPandas generally expects
-# the shapefile's supporting files (.shx, .dbf, .prj) alongside the .shp.
-temp_dir = Path("census_county_boundaries")
-temp_dir.mkdir(exist_ok=True)
-boundary_zip.extractall(temp_dir)
+The example displays missing or invalid estimates in gray. This treatment does not automatically identify all county-equivalent boundary changes or establish that estimates are comparable across different geographic vintages. If the analysis requires strict geographic comparability, explicitly identify and document the affected areas.
 
-shapefile_path = temp_dir / Path(shp_name).name
-counties = gpd.read_file(shapefile_path)
+**Validation before publication**
 
-# GEOID is the county FIPS identifier in the Census boundary file.
-counties["GEOID"] = counties["GEOID"].astype(str).str.zfill(5)
+Before publishing an adapted map:
 
-print(f"County boundary features: {len(counties):,}")
-print(f"Unique boundary GEOIDs: {counties['GEOID'].nunique():,}")
+- Verify the Census API response and variable definitions.
+- Confirm that the county GEOIDs join correctly to the boundary data.
+- Check for missing, invalid, or duplicate records.
+- Review the class thresholds and legend labels.
+- Confirm that the colors, boundaries, and text remain legible at the intended display size.
+- Verify source wording and reference-period accuracy.
+- Review relevant ACS uncertainty information before interpreting differences between counties.
+- Inspect the exported image and CSV to ensure that they reflect the intended data and classification.
 
-# ---------------------------
-# 4. Join estimates to shapes
-# ---------------------------
-
-# A left join keeps every boundary polygon, including areas where the
-# estimate is unavailable. Those areas will appear with the missing-data
-# style rather than being silently dropped or assigned a value of zero.
-county_map = counties.merge(
-    income[["GEOID", "county_name", "median_household_income"]],
-    on="GEOID",
-    how="left",
-    validate="one_to_one",
-)
-
-# Check the join. A high number of unmatched rows should be investigated
-# before publishing the map (for example, vintage or geography mismatch).
-unmatched = county_map["median_household_income"].isna().sum()
-print(f"Boundary areas with missing joined estimates: {unmatched:,}")
-
-# ---------------------------
-# 5. Prepare the map
-# ---------------------------
-
-# Keep Alaska, Hawaii, and Puerto Rico in the map if present in the boundary
-# file. This is a national county map; the figure may be wide and detailed.
-# For a state-level or regional story, filter the data before plotting.
-#
-# Use a sequential palette because median household income is an ordered
-# numeric measure. The darker shades indicate higher estimates.
-#
-# Quantile classification puts approximately equal numbers of areas into
-# each class. Classification changes how patterns appear, so state the
-# method in the map note. For publication, assess whether quantiles answer
-# the intended question better than equal intervals or meaningful thresholds.
-
-fig, ax = plt.subplots(figsize=(18, 11))
-
-# Plot counties with available estimates. GeoPandas applies quantile
-# classification through mapclassify when scheme="Quantiles" is used.
-mapped = county_map[county_map["median_household_income"].notna()]
-mapped.plot(
-    column="median_household_income",
-    cmap="Blues",
-    scheme="Quantiles",
-    k=5,
-    linewidth=0.12,
-    edgecolor="white",
-    legend=True,
-    legend_kwds={
-        "label": "Median household income (dollars)",
-        "orientation": "horizontal",
-        "shrink": 0.65,
-        "pad": 0.02,
-    },
-    ax=ax,
-)
-
-# Draw areas without an estimate in a neutral gray. This visually separates
-# missing/unavailable data from low income estimates.
-missing = county_map[county_map["median_household_income"].isna()]
-if not missing.empty:
-    missing.plot(
-        ax=ax,
-        color="#D9D9D9",
-        edgecolor="white",
-        linewidth=0.12,
-        label="No estimate available",
-    )
-
-# Remove axis ticks and frame because geographic coordinates are not the
-# message of this thematic map.
-ax.set_axis_off()
-
-# Give the chart a descriptive title and identify the geography and vintage.
-ax.set_title(
-    "Median Household Income by County",
-    fontsize=18,
-    fontweight="bold",
-    pad=18,
-)
-
-# Add a source note with the table and estimate period. The wording should
-# be reviewed against the precise ACS table metadata before publication.
-fig.text(
-    0.08,
-    0.04,
-    "Source: U.S. Census Bureau, 2024 ACS 5-Year Estimates, Table B19013. "
-    "Classification: 5 quantile classes. Gray indicates no estimate available.",
-    ha="left",
-    fontsize=9,
-    wrap=True,
-)
-
-# Use a tight layout but reserve space at the bottom for the source note.
-plt.tight_layout(rect=[0, 0.07, 1, 0.98])
-
-# Save a high-resolution static image that can be inspected or included
-# in a report. Also display it in an interactive Python environment.
-output_file = "median_household_income_by_county.png"
-plt.savefig(output_file, dpi=300, bbox_inches="tight")
-plt.show()
-
-print(f"Map saved to: {output_file}")
-
-# ---------------------------
-# 6. Publication checks
-# ---------------------------
-
-# These checks are reminders, not a substitute for review:
-# - Verify the API query, data vintage, table definition, and source wording.
-# - Review the class breaks and whether quantiles are appropriate.
-# - Confirm missing areas are shown clearly and not confused with low values.
-# - Check small areas and boundaries for legibility at the intended size.
-# - Consider a complementary table or bar chart when precise comparisons
-#   between specific counties are central to the message.
-# - Review ACS margins of error and other uncertainty information before
-#   interpreting differences between estimates.
-
-```
+The goal is to preserve the analytical meaning of the data while adapting the map to the intended audience and use case.
 
 ### R
 
