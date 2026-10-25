@@ -11,8 +11,33 @@ description: "Short Description of Choropleth Map"
 
 ## 1. Purpose and Overview 
 
-A choropleth map is a type of map in which geographic areas are assigned a color in relation to a data variable.
-Choropleth maps are best used to display the geographic distribution of data. You can also use a choropleth map to make comparisons between geographic areas but be aware that any geographic patterns will depend on the method used to group your data. The data in a choropleth map can be categorical or numeric. When using numeric data, the data should be normalized (do not use counts; see proportional symbols map).
+A choropleth map is a type of map in which geographic areas are assigned a color
+in relation to a data variable. Choropleth maps are best used to display the
+geographic distribution of data. They can also be used to compare geographic
+areas, but the patterns shown depend in part on how the data are grouped.
+
+The data in a choropleth map can be categorical or numeric. When mapping numeric
+data, use a normalized measure—such as a percentage, density, ratio, median, or
+average—rather than raw counts. For mapping counts, see the **Proportional Symbol
+Map** guidance.
+
+## When to Use
+
+Use a choropleth map when the main question concerns how a comparable measure
+varies across geographic areas, such as states, counties, or census tracts.
+
+Appropriate examples include:
+
+- Comparing the percentage of adults age 25 and older with a bachelor's degree
+  or higher across counties.
+- Showing poverty rates across states or counties.
+- Mapping median household income across geographic areas.
+
+Use another visualization when geographic distribution is not central to the
+question, when precise ranking is the priority, or when the data cannot be
+compared meaningfully across the mapped areas. A sorted bar chart or table may
+make value comparisons easier; a proportional symbol map may be appropriate
+when the intended message is about counts.
 
 ## Guidance
 
