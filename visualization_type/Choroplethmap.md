@@ -41,7 +41,9 @@ when the intended message is about counts.
 
 ## Guidance
 
-In addition to the guidance provided in this section, relevant guidance can also be found in the Agency Logo, Axes, Colors, Grids, Legends, Map Layout, Source, Titles, Typography sections. 
+In addition to the guidance below, follow the repository's existing **Agency
+Logo, Axes, Colors, Grids, Legends, Map Layout, Source, Titles, and Typography**
+guidance. Those pages contain shared standards and should not be duplicated here.
 
 ### Essential
 
