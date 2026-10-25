@@ -116,8 +116,10 @@ guidance. Those pages contain shared standards and should not be duplicated here
 
 ## Examples and Discussion
  
-Static Choropleth Map 
-***Example 1:*** Percentage of persons 25 and Older with a Bachelor’s Degree or Higher, 2015-2019
+### Static Choropleth Map — Example 1
+
+**Percentage of persons age 25 and older with a bachelor's degree or higher,
+2015–2019**
 
 ![Area Plot 1](assets/Choroplethmap1.png)
 
