@@ -5,8 +5,11 @@ permalink: choroplethmap.html
 tags: [Distribution]
 description: "Short Description of Choropleth Map"
 ---
+# Choropleth Map 
 
-# Choropleth Map
+**Also known as:** Shaded-area map; thematic area map 
+
+## 1. Purpose and Overview 
 
 A choropleth map is a type of map in which geographic areas are assigned a color in relation to a data variable.
 Choropleth maps are best used to display the geographic distribution of data. You can also use a choropleth map to make comparisons between geographic areas but be aware that any geographic patterns will depend on the method used to group your data. The data in a choropleth map can be categorical or numeric. When using numeric data, the data should be normalized (do not use counts; see proportional symbols map).
