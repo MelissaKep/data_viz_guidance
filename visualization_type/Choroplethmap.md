@@ -47,23 +47,50 @@ guidance. Those pages contain shared standards and should not be duplicated here
 
 ### Essential
 
-* Choose an appropriate method of grouping your data if it is numeric. Common methods of classification include, but are not limited to:
-  * Natural Breaks: classification method groups data based on gaps in the data.
-  * Equal Interval: classification method divides the data range into equal intervals. This method works best when data are evenly distributed. If the distribution is uneven, the predominant values will dominate the map.
-  * Quantile: classification method partitions the data so that every group has an equal number or nearly equal number of values. This can give a choropleth map an even, aesthetically pleasing color distribution.
-  * Subject matter expertise can be used to place data into groups.
-* Include a legend. Refer to the Legends section for more specific guidance and examples.
-* Match the value in the legend to the precision of the tabular dataset (e.g., rounded to one decimal place) for numeric data.
-* Use sequential or diverging color scheme for numeric (quantitative) data. Use a categorical color scheme for non-numeric (qualitative) data.
-* Normalize data (e.g., percentages, densities, ratios, medians, averages) rather than using counts.
-* Account for all entities in the geographic layer for which data are shown (e.g., states, counties). When a subset of entities do not have data available in the dataset, those entities should be identified on the map in a separate category (such as, no comparable data available).
- 
+- **Choose an appropriate classification method for numeric data.** Common
+  methods include:
+  - **Natural Breaks:** Groups values based on gaps in the data.
+  - **Equal Interval:** Divides the data range into equal intervals. This can
+    work well when values are evenly distributed; with uneven distributions,
+    many observations may fall into a small number of classes.
+  - **Quantile:** Divides the data so each class contains an equal or nearly
+    equal number of observations. This can create a balanced distribution of
+    colors, but values within a class may be far apart.
+  - **Subject-matter-defined classes:** Uses thresholds justified by subject
+    matter expertise. Document the rationale for the thresholds.
+- **Include a legend.** Refer to the Legends section for detailed guidance and
+  examples.
+- **Match legend precision to the tabular data.** For numeric data, use
+  appropriate rounding (for example, one decimal place when supported by the
+  source data).
+- **Use a suitable color scheme.** Use sequential or diverging schemes for
+  quantitative data and categorical schemes for qualitative data. Choose a
+  diverging scheme only when a meaningful midpoint or reference value exists.
+- **Normalize numeric data.** Use percentages, densities, ratios, medians, or
+  averages when these are appropriate to the analytical question; do not map
+  raw counts as if they were comparable rates.
+- **Account for every geographic entity in the map layer.** If some areas do not
+  have data, identify them separately (for example, “No comparable data
+  available”). Do not treat missing data as zero or as the lowest class.
+- **Ensure classes are mutually exclusive.** Each possible numeric value should
+  belong to one and only one class. Explain class boundaries when needed for
+  interpretation.
+- **Consider survey estimates carefully.** Do not create a class break
+  specifically to highlight a particular survey estimate, such as a national
+  estimate, when mapping survey data such as the American Community Survey.
+
 ### Avoid
 
-* Never use a qualitative or categorical color scheme to map quantitative data.
-* Never create classes that have overlapping values. Any particular value should be associated with one and only one class.
-* Never create a purposeful class break highlighting a specific estimate (e.g., national estimate) when mapping survey data (e.g., American Community Survey).
- 
+- Do not use a qualitative or categorical color scheme to represent quantitative
+  values.
+- Do not create classes with overlapping ranges or gaps that leave valid values
+  unclassified.
+- Do not use raw counts when the map is intended to compare relative levels
+  across areas with different population sizes.
+- Do not assign missing, suppressed, or unavailable values to the lowest class.
+- Do not imply that a geographic-area estimate describes every person or
+  household within that area.
+
 ## Additional Recommendations
 
 ### Recommended
