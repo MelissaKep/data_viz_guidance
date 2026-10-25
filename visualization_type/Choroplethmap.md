@@ -95,15 +95,24 @@ guidance. Those pages contain shared standards and should not be duplicated here
 
 ### Recommended
 
-* Limit the number of categories to six or fewer.
-  * Fewer categories on a map helps users to better understand what is being visualized and allows for trends in the data to be more easily identified.
-* Adjust class breaks to round numbers so values in legend are easier to interpret.
-* Limit display of geographic area boundaries to those necessary for clear data presentation.
-* Choose appropriate line weights to display geographic area boundaries based on map scale and geographic complexity. (Thick line weights may obscure the data fill colors.)
+- **Limit the number of classes to six or fewer** when this is appropriate for
+  the data and intended audience. Fewer classes can make patterns easier to
+  interpret.
+- **Consider rounding class breaks** to values that are easier to read, while
+  ensuring the boundaries remain meaningful and do not distort the data.
+- **Limit boundary lines** to those needed for clear geographic interpretation.
+- **Choose line weights appropriate to map scale and geographic complexity.**
+  Thick boundaries can obscure the fill colors.
+- **Use consistent class breaks and color scales** for maps intended for direct
+  comparison, unless a different approach is justified and explained.
 
 ### Not Recommended
 
-Avoid dot, line, or hatching fill patterns in a choropleth map.
+- Avoid dot, line, or hatching fill patterns in a choropleth map.
+- Avoid class breaks that create an exaggerated impression of differences.
+- Avoid using color alone to communicate information when the map interface
+  provides no equivalent way to access the underlying values; follow the
+  repository's separate accessibility guidance.
 
 ## Examples and Discussion
  
