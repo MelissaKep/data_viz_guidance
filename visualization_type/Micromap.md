@@ -164,11 +164,31 @@ The implementation checks variable availability for the selected ACS release, jo
 
 The repository includes two downloadable Python implementation files:
 
-| File | Purpose | Recommended Use |
-|---|---|---|
-| [Download Micromap Example Python Script](https://github.com/MelissaKep/data_viz_guidance/raw/refs/heads/main/Python%20Artifacts/micromap_example.py) | Standalone Python implementation of the linked micromap. | Run in a Python environment or adapt for another project. |
-| [Download Micromap Jupyter Notebook](https://github.com/MelissaKep/data_viz_guidance/raw/refs/heads/main/Python%20Artifacts/Micromap_Example.ipynb) | Interactive notebook version of the implementation. | Run in Google Colab or Jupyter Notebook. |
-
+<table>
+  <thead>
+    <tr>
+      <th>File</th>
+      <th>Purpose</th>
+      <th>Recommended Use</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+        <a href="{{ '/Python%20Artifacts/micromap_example.py' | relative_url }}" download="micromap_example.py">Download Micromap Example Python Script</a>
+      </td>
+      <td>Standalone Python implementation of the linked micromap, including data retrieval, preparation, visualization, and export functionality.</td>
+      <td>Run in a Python environment or adapt for another project.</td>
+    </tr>
+    <tr>
+      <td>
+        <a href="{{ '/Python%20Artifacts/Micromap_Example.ipynb' | relative_url }}" download="Micromap_Example.ipynb">Download Micromap Jupyter Notebook</a>
+      </td>
+      <td>Interactive notebook version of the implementation, with executable cells for reviewing the workflow.</td>
+      <td>Run interactively in Google Colab or Jupyter Notebook.</td>
+    </tr>
+  </tbody>
+</table>
 **Packages**
 
 The examples use `pandas`, `requests`, and `plotly`. The implementation also retrieves geographic boundary data from the public GeoJSON source configured in the Python files.
