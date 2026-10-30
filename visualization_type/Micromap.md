@@ -168,6 +168,7 @@ The repository includes two downloadable Python implementation files:
 |---|---|---|
 | [Download Micromap Example Python Script](https://github.com/MelissaKep/data_viz_guidance/raw/refs/heads/main/Python%20Artifacts/micromap_example.py) | Standalone Python implementation of the linked micromap. | Run in a Python environment or adapt for another project. |
 | [Download Micromap Jupyter Notebook](https://github.com/MelissaKep/data_viz_guidance/raw/refs/heads/main/Python%20Artifacts/Micromap_Example.ipynb) | Interactive notebook version of the implementation. | Run in Google Colab or Jupyter Notebook. |
+
 **Packages**
 
 The examples use `pandas`, `requests`, and `plotly`. The implementation also retrieves geographic boundary data from the public GeoJSON source configured in the Python files.
