@@ -164,10 +164,35 @@ The implementation checks variable availability for the selected ACS release, jo
 
 The repository includes two downloadable Python implementation files:
 
-| File | Purpose | Recommended Use |
-|---|---|---|
-| <a href="{{ '/Python%20Artifacts/micromap_example.py' | relative_url }}" download="micromap_example.py">Download Micromap Example Python Script</a> | Standalone Python implementation of the linked micromap. | Run in a Python environment or adapt for another project. |
-| <a href="{{ '/Python%20Artifacts/Micromap_Example.ipynb' | relative_url }}" download="Micromap_Example.ipynb">Download Micromap Jupyter Notebook</a> | Interactive notebook version of the implementation. | Run in Google Colab or Jupyter Notebook. |
+<table>
+  <thead>
+    <tr>
+      <th>File</th>
+      <th>Purpose</th>
+      <th>Recommended Use</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+        <a href="/data_viz_guidance/Python%20Artifacts/micromap_example.py" download="micromap_example.py">
+          Download Micromap Example Python Script
+        </a>
+      </td>
+      <td>Standalone Python implementation of the linked micromap.</td>
+      <td>Run in a Python environment or adapt for another project.</td>
+    </tr>
+    <tr>
+      <td>
+        <a href="/data_viz_guidance/Python%20Artifacts/Micromap_Example.ipynb" download="Micromap_Example.ipynb">
+          Download Micromap Jupyter Notebook
+        </a>
+      </td>
+      <td>Interactive notebook version of the implementation.</td>
+      <td>Run in Google Colab or Jupyter Notebook.</td>
+    </tr>
+  </tbody>
+</table>
 
 **Packages**
 
