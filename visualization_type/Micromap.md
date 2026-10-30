@@ -166,8 +166,8 @@ The repository includes two downloadable Python implementation files:
 
 | File | Purpose | Recommended Use |
 |---|---|---|
-| [Download Micromap Example Python Script](https://github.com/MelissaKep/data_viz_guidance/raw/refs/heads/main/Python%20Artifacts/micromap_example.py) | Standalone Python implementation of the linked micromap. | Run in a Python environment or adapt for another project. |
-| [Download Micromap Jupyter Notebook](https://github.com/MelissaKep/data_viz_guidance/raw/refs/heads/main/Python%20Artifacts/Micromap_Example.ipynb) | Interactive notebook version of the implementation. | Run in Google Colab or Jupyter Notebook. |
+| <a href="{{ '/Python%20Artifacts/micromap_example.py' | relative_url }}" download="micromap_example.py">Download Micromap Example Python Script</a> | Standalone Python implementation of the linked micromap. | Run in a Python environment or adapt for another project. |
+| <a href="{{ '/Python%20Artifacts/Micromap_Example.ipynb' | relative_url }}" download="Micromap_Example.ipynb">Download Micromap Jupyter Notebook</a> | Interactive notebook version of the implementation. | Run in Google Colab or Jupyter Notebook. |
 
 **Packages**
 
