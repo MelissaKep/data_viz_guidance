@@ -166,8 +166,8 @@ The repository includes two downloadable Python implementation files:
 
 | File | Purpose | Recommended Use |
 |---|---|---|
-| [Download Micromap Example Python Script](https://github.com/MelissaKep/data_viz_guidance/raw/refs/heads/main/micromap_example.py) | Standalone Python script for retrieving Census data, preparing the data, creating the linked micromap, and exporting results. | Run from a Python environment or adapt for another Python project. |
-| [Download Micromap Jupyter Notebook](https://github.com/MelissaKep/data_viz_guidance/raw/refs/heads/main/Micromap_Example.ipynb) | Jupyter Notebook version of the implementation. | Run interactively in Google Colab or Jupyter Notebook and review the workflow step by step. |
+| [Download Micromap Example Python Script](https://github.com/MelissaKep/data_viz_guidance/raw/refs/heads/main/micromap_example.py) | Standalone Python implementation of the linked micromap. | Run in a Python environment or adapt for another project. |
+| [Download Micromap Jupyter Notebook](https://github.com/MelissaKep/data_viz_guidance/raw/refs/heads/main/Micromap_Example.ipynb) | Interactive notebook version of the implementation. | Run in Google Colab or Jupyter Notebook. |
 
 **Packages**
 
