@@ -221,7 +221,21 @@ The examples use `pandas`, `requests`, and `plotly`. The implementation also ret
 
 Run the `.ipynb` file in Google Colab or Jupyter Notebook. Run the `.py` file from a Python environment after installing its dependencies. The implementation files contain the executable code and the detailed run instructions; this Markdown page intentionally does not duplicate that code.
 
-### 8.3 Reproducibility and Adaptation
+### 8.3 Downloadable Example Outputs
+
+The repository also includes output files from a completed 2010 run of the Python example. These files let developers review the prepared dataset and metadata without running the script first.
+
+| Output | Description | Download |
+|---|---|---|
+| Micromap plot (PNG) | Static image of the 2010 linked micromap for quick viewing or use in documentation. | [Download Micromap 2010 Plot](https://melissakep.github.io/data_viz_guidance/Python%20Artifacts/Micromap%202010%20Plot.png) |
+| Prepared dataset (CSV) | State-level income and poverty data, including the calculated poverty grouping used by the visualization. | [Download 2010 Census Income and Poverty Data](https://melissakep.github.io/data_viz_guidance/Python%20Artifacts/census_income_poverty_2010.csv) |
+| Metadata (JSON) | Source, release year, variables, grouping method, and other details associated with the prepared dataset. | [Download 2010 Census Data Metadata](https://melissakep.github.io/data_viz_guidance/Python%20Artifacts/census_income_poverty_2010_metadata.json) |
+
+The CSV and JSON filenames are generated using the selected ACS year. For example, running the script for 2010 creates `census_income_poverty_2010.csv` and `census_income_poverty_2010_metadata.json`. The repository links above point to the 2010 example files currently included in the project; they do not change automatically when a new year is selected.
+
+The Python script displays the interactive Plotly micromap when it runs. To create a standalone interactive HTML file, set `SAVE_HTML_COPY = True` in the script before running it. The HTML file is then saved in the output directory using the selected year in its filename. The current script does not automatically export a PNG image; the PNG link above is the separately saved 2010 example image.
+
+### 8.4 Reproducibility and Adaptation
 
 Before using the example in another environment or adapting it:
 
