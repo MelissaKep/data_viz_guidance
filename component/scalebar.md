@@ -133,7 +133,7 @@ A scale bar should be easy to locate without competing with the map's main analy
 - **Projection and latitude:** Do not assume that one scale bar is accurate everywhere on a map. In Web Mercator, for example, scale distortion varies with latitude. A scale bar can still be useful if it is dynamically or locally calculated and its scope is understood.
 - **Interactive behavior:** In a web map, update the scale bar whenever zooming or panning changes the map scale or the location at which the scale is evaluated.
 - **Export behavior:** Test the scale bar after saving or exporting the map. Ensure it remains visible and is not clipped by tight layout settings.
-- **Source and method note:** When appropriate, document the CRS, distance unit, and whether the bar represents a local or dynamically recalculated distance.
+- **Source and method note:** When appropriate, document the CRS(Coordinate Reference System), distance unit, and whether the bar represents a local or dynamically recalculated distance.
 
 ### Color and accessibility considerations for the Census map
 
