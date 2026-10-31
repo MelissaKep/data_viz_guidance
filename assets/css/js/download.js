@@ -1,4 +1,3 @@
-
 document.addEventListener("click", async function (event) {
     const link = event.target.closest("a.download-file");
 
@@ -27,10 +26,7 @@ document.addEventListener("click", async function (event) {
         downloadLink.click();
         downloadLink.remove();
 
-        // Give the browser time to begin downloading before cleanup.
-        setTimeout(function () {
-            URL.revokeObjectURL(downloadUrl);
-        }, 30000);
+        setTimeout(() => URL.revokeObjectURL(downloadUrl), 30000);
 
     } catch (error) {
         console.error("Download error:", error);
