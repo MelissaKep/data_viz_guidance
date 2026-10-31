@@ -274,5 +274,3 @@ Before using the example in another environment or adapting it:
 - [ ] The Python implementation files are available and have been executed and reviewed.
 - [ ] Source data, transformations, and output metadata are documented.
 - [ ] The visualization has undergone the appropriate review.
-
-<script src="https://melissakep.github.io/data_viz_guidance/assets/js/download.js" defer></script>
