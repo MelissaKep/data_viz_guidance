@@ -160,6 +160,7 @@ The example retrieves state-level ACS data and prepares the measures for the lin
 
 The implementation checks variable availability for the selected ACS release, joins the measures using state FIPS codes, handles unavailable values, and records the source and methodology in metadata. If the poverty rate must be calculated from counts, the result is documented as a derived measure and is not assigned an unsupported margin of error.
 
+
 ### 8.2 Python
 
 The repository includes two downloadable Python implementation files:
@@ -175,14 +176,22 @@ The repository includes two downloadable Python implementation files:
   <tbody>
     <tr>
       <td>
-        <a href="https://melissakep.github.io/data_viz_guidance/Python%20Artifacts/micromap_example.py" download="micromap_example.py">Download Micromap Example Python Script</a>
+        <a href="https://melissakep.github.io/data_viz_guidance/Python%20Artifacts/micromap_example.py"
+           class="download-file"
+           data-filename="micromap_example.py">
+          Download Micromap Example Python Script
+        </a>
       </td>
       <td>Standalone Python implementation of the linked micromap, including data retrieval, preparation, visualization, and export functionality.</td>
       <td>Run in a Python environment or adapt for another project.</td>
     </tr>
     <tr>
       <td>
-        <a href="https://melissakep.github.io/data_viz_guidance/Python%20Artifacts/Micromap_Example.ipynb" download="Micromap_Example.ipynb">Download Micromap Jupyter Notebook</a>
+        <a href="https://melissakep.github.io/data_viz_guidance/Python%20Artifacts/Micromap_Example.ipynb"
+           class="download-file"
+           data-filename="Micromap_Example.ipynb">
+          Download Micromap Jupyter Notebook
+        </a>
       </td>
       <td>Interactive notebook version of the implementation, with executable cells for reviewing the workflow.</td>
       <td>Run interactively in Google Colab or Jupyter Notebook.</td>
