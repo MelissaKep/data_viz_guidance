@@ -162,10 +162,64 @@ Missing or invalid estimates should remain missing. They should not be converted
 
 The complete Python example is provided as separate downloadable files so developers can either run the script directly or work interactively in Jupyter Notebook or Google Colab.
 
-| File | Purpose | Recommended Use |
-|---|---|---|
-| [Download Python Script — Choropleth_Map_Examples.py](Choropleth_Map_Examples.py) | Standalone Python implementation of the choropleth map, including data retrieval, preparation, visualization, and export functionality. | Run in a Python environment or adapt for another project. |
-| [Download Jupyter Notebook — Choropleth_Map_Examples.ipynb](Choropleth_Map_Examples.ipynb) | Interactive notebook version of the implementation, with executable cells for reviewing the workflow. | Run interactively in Google Colab or Jupyter Notebook. |
+<table>
+  <thead>
+    <tr>
+      <th>File</th>
+      <th>Purpose</th>
+      <th>Recommended Use</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+        <a href="https://melissakep.github.io/data_viz_guidance/Python%20Artifacts/choropleth_map_example.py"
+           class="download-file"
+           data-filename="choropleth_map_example.py">
+          Download Choropleth Map Example Python Script
+        </a>
+      </td>
+      <td>Standalone Python implementation of the choropleth map, including data retrieval, preparation, visualization, and export functionality.</td>
+      <td>Run in a Python environment or adapt for another project.</td>
+    </tr>
+    <tr>
+      <td>
+        <a href="https://melissakep.github.io/data_viz_guidance/Python%20Artifacts/Choropleth_Map_Example.ipynb"
+           download="Choropleth_Map_Example.ipynb"
+           class="download-file"
+           data-filename="Choropleth_Map_Example.ipynb">
+          Download Choropleth Map Jupyter Notebook
+        </a>
+      </td>
+      <td>Interactive notebook version of the implementation, with executable cells for reviewing the workflow.</td>
+      <td>Run interactively in Google Colab or Jupyter Notebook.</td>
+    </tr>
+    <tr>
+      <td>
+        <a href="https://melissakep.github.io/data_viz_guidance/Python%20Artifacts/bachelors_degree_choropleth_2015_2019.png"
+           download="bachelors_degree_choropleth_2015_2019.png"
+           class="download-file"
+           data-filename="bachelors_degree_choropleth_2015_2019.png">
+          Download Bachelor's Degree Choropleth Map (PNG)
+        </a>
+      </td>
+      <td>Exported county-level choropleth map showing the percentage of the population age 25 and older with a bachelor's degree or higher.</td>
+      <td>View the completed visualization or include it in documentation, reports, and presentations.</td>
+    </tr>
+    <tr>
+      <td>
+        <a href="https://melissakep.github.io/data_viz_guidance/Python%20Artifacts/bachelors_degree_county_data_2015_2019.csv"
+           download="bachelors_degree_county_data_2015_2019.csv"
+           class="download-file"
+           data-filename="bachelors_degree_county_data_2015_2019.csv">
+          Download Bachelor's Degree County Data (CSV)
+        </a>
+      </td>
+      <td>County-level output data containing geographic identifiers, county names, calculated percentages, and legend categories used in the map.</td>
+      <td>Review mapped values, validate the output, or use the data for additional analysis and visualizations.</td>
+    </tr>
+  </tbody>
+</table>
 
 **Implementation details:**
 
@@ -196,12 +250,7 @@ The example retrieves ACS county estimates and Census geographic boundary files 
 
 ### Output Files
 
-Both downloadable Python implementations (the `.py` script and `.ipynb` notebook) generate the following output files when run successfully. The files are saved in the working directory and can be included in the repository alongside the implementation files.
-
-| File | Contents | Recommended Use |
-|---|---|---|
-| [bachelors_degree_choropleth_2015_2019.png](bachelors_degree_choropleth_2015_2019.png) | Exported choropleth map showing the percentage of the population age 25 and older with a bachelor's degree or higher across counties. | Use the image in documentation, reports, presentations, or other static publications. |
-| [bachelors_degree_county_data_2015_2019.csv](bachelors_degree_county_data_2015_2019.csv) | County-level output data, including geographic identifiers, county names, calculated percentages, and legend categories. | Use the data to review mapped values, validate the output, or create additional analysis and visualizations. |
+Both downloadable Python implementations (the `.py` script and `.ipynb` notebook) generate the PNG map and CSV dataset listed in the download table above when run successfully. The output files are saved in the working directory. The repository also provides them as separate downloads so developers can review the finished map and reuse the county-level data without rerunning the code.
 
 ## Reproducibility and Adaptation of the Data and Chart
 
