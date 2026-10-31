@@ -2,6 +2,8 @@ document.addEventListener("click", async function (event) {
     const link = event.target.closest("a.download-file");
 
     if (!link) return;
+    
+    console.log("Download handler triggered:", link.href);
 
     event.preventDefault();
 
