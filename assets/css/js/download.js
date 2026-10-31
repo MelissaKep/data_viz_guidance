@@ -1,3 +1,4 @@
+
 document.addEventListener("click", async function (event) {
     const link = event.target.closest("a.download-file");
 
@@ -6,7 +7,7 @@ document.addEventListener("click", async function (event) {
     event.preventDefault();
 
     const fileUrl = link.href;
-    const fileName = link.dataset.filename || fileUrl.split("/").pop();
+    const fileName = link.dataset.filename || "download";
 
     try {
         const response = await fetch(fileUrl);
@@ -26,9 +27,13 @@ document.addEventListener("click", async function (event) {
         downloadLink.click();
         downloadLink.remove();
 
-        URL.revokeObjectURL(downloadUrl);
+        // Give the browser time to begin downloading before cleanup.
+        setTimeout(function () {
+            URL.revokeObjectURL(downloadUrl);
+        }, 30000);
+
     } catch (error) {
-        console.error("Unable to download file:", error);
-        alert("The file could not be downloaded. Please try again.");
+        console.error("Download error:", error);
+        alert("Unable to download the file. Please try again.");
     }
 });
