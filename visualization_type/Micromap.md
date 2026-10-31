@@ -275,3 +275,4 @@ Before using the example in another environment or adapting it:
 - [ ] Source data, transformations, and output metadata are documented.
 - [ ] The visualization has undergone the appropriate review.
 
+<script src="https://melissakep.github.io/data_viz_guidance/assets/js/download.js" defer></script>
