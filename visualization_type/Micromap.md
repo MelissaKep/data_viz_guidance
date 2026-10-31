@@ -187,7 +187,7 @@ The repository includes two downloadable Python implementation files:
     </tr>
     <tr>
       <td>
-        <a href="https://github.com/MelissaKep/data_viz_guidance/raw/refs/heads/main/Python%20Artifacts/Micromap_Example.ipynb?download=1"
+        <a href="https://melissakep.github.io/data_viz_guidance/Python%20Artifacts/Micromap_Example.ipynb"
            class="download-file"
            data-filename="Micromap_Example.ipynb">
           Download Micromap Jupyter Notebook
