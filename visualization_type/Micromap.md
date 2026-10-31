@@ -160,7 +160,6 @@ The example retrieves state-level ACS data and prepares the measures for the lin
 
 The implementation checks variable availability for the selected ACS release, joins the measures using state FIPS codes, handles unavailable values, and records the source and methodology in metadata. If the poverty rate must be calculated from counts, the result is documented as a derived measure and is not assigned an unsupported margin of error.
 
-
 ### 8.2 Python
 
 The repository includes two downloadable Python implementation files:
