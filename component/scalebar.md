@@ -94,31 +94,31 @@ The following examples illustrate different scale bar treatments, placement choi
 
 ![Scale bar design example 1](assets/scalebar1.png)
 
-***Example 1:*** The primary map in this layout includes scale bars for the U.S., Alaska, and Hawaii, while subsequent smaller maps in the series do not.
+***Example 1:*** This example uses a straightforward scale bar labeled from 0 to 100 miles, providing a quick reference for estimating distances on the map. Its minimal design keeps the scale easy to read without drawing attention away from the map itself.
 
 ![Scale bar design example 2](assets/scalebar2.png)
 
-***Example 2:*** The primary map in this layout includes scale bars for the U.S., Alaska, and Hawaii, while subsequent smaller maps in the series do not.
+***Example 2:*** This example uses alternating black-and-white segments with multiple distance labels extending to 2,000 miles. The segmented design makes it easier to estimate intermediate distances and is especially useful for maps covering larger geographic areas.
 
 ![Scale bar design example 3](assets/scalebar3.png)
 
-***Example 3:*** The primary map in this layout includes scale bars for the U.S., Alaska, and Hawaii, while subsequent smaller maps in the series do not.
+***Example 3:*** This map includes separate scale bars for the contiguous United States, Alaska, Hawaii, and Puerto Rico. This is important because the inset maps represent different geographic extents and scales, so each needs its own distance reference to avoid misleading readers.
 
 ![Scale bar design example 4](assets/scalebar4.png)
 
-***Example 4:*** The primary map in this layout includes scale bars for the U.S., Alaska, and Hawaii, while subsequent smaller maps in the series do not.
+***Example 4:*** This example displays kilometers along the top and miles along the bottom of the same scale bar. Providing both units makes the map more accessible to audiences who use different measurement systems while allowing readers to compare equivalent distances.
 
 ![Scale bar design example 5](assets/scalebar5.png)
 
-***Example 5:*** The primary map in this layout includes scale bars for the U.S., Alaska, and Hawaii, while subsequent smaller maps in the series do not.
+***Example 5:*** This example maps the percentage of female-female married and unmarried couple households across U.S. counties, with separate geographic insets for Alaska and Hawaii. The scale bars help readers interpret distances across the main map and inset areas, while the county-level detail demonstrates how scale references can support maps with many small geographic units.
 
 ![Scale bar design example 6](assets/scalebar6.png)
 
-***Example 6:*** The primary map in this layout includes scale bars for the U.S., Alaska, and Hawaii, while subsequent smaller maps in the series do not.
+***Example 6:*** This example compares poverty rates across three age categories using separate maps within one layout. Including geographic scale references helps maintain spatial context across the panels, while the consistent map arrangement makes it easier to compare geographic patterns between age groups.
 
 ![Scale bar design example 7](assets/scalebar7.png)
 
-***Example 7:*** The primary map in this layout includes scale bars for the U.S., Alaska, and Hawaii, while subsequent smaller maps in the series do not.
+***Example 7:*** This example presents health insurance coverage across states and includes separate maps comparing Medicaid expansion and non-expansion states. Its use of multiple geographic views demonstrates why scale bars should be considered for each map rather than assuming one scale reference applies to every panel.
 
 These examples can help developers evaluate scale bar design choices across different map types. A single-division or alternating/segmented scale bar may be appropriate depending on the map’s purpose, layout, and level of geographic detail. Keep the image files in the repository at the paths shown above, and update the Markdown paths if the assets are moved or renamed.
 
