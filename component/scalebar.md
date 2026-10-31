@@ -93,20 +93,26 @@ The ACS 5-year estimates summarize a five-year period and are not a single-year 
 The following examples illustrate different scale bar treatments, placement choices, and considerations for maps with multiple geographic extents:
 
 ![Scale bar design example 1](assets/scalebar1.png)
+***Example 1:*** The primary map in this layout includes scale bars for the U.S., Alaska, and Hawaii, while subsequent smaller maps in the series do not.
 
 ![Scale bar design example 2](assets/scalebar2.png)
+***Example 2:*** The primary map in this layout includes scale bars for the U.S., Alaska, and Hawaii, while subsequent smaller maps in the series do not.
 
 ![Scale bar design example 3](assets/scalebar3.png)
 
 ***Example 3:*** The primary map in this layout includes scale bars for the U.S., Alaska, and Hawaii, while subsequent smaller maps in the series do not.
 
 ![Scale bar design example 4](assets/scalebar4.png)
+***Example 4:*** The primary map in this layout includes scale bars for the U.S., Alaska, and Hawaii, while subsequent smaller maps in the series do not.
 
 ![Scale bar design example 5](assets/scalebar5.png)
+***Example 5:*** The primary map in this layout includes scale bars for the U.S., Alaska, and Hawaii, while subsequent smaller maps in the series do not.
 
 ![Scale bar design example 6](assets/scalebar6.png)
+***Example 6:*** The primary map in this layout includes scale bars for the U.S., Alaska, and Hawaii, while subsequent smaller maps in the series do not.
 
 ![Scale bar design example 7](assets/scalebar7.png)
+***Example 7:*** The primary map in this layout includes scale bars for the U.S., Alaska, and Hawaii, while subsequent smaller maps in the series do not.
 
 These examples can help developers evaluate scale bar design choices across different map types. A single-division or alternating/segmented scale bar may be appropriate depending on the map’s purpose, layout, and level of geographic detail. Keep the image files in the repository at the paths shown above, and update the Markdown paths if the assets are moved or renamed.
 
