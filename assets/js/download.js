@@ -1,10 +1,11 @@
+console.error("DOWNLOAD.JS LOADED SUCCESSFULLY");
 document.addEventListener("click", async function (event) {
     const link = event.target.closest("a.download-file");
 
     if (!link) return;
     
-    console.log("Download handler triggered:", link.href);
-
+    console.error("DOWNLOAD HANDLER TRIGGERED:", link.href);
+    
     event.preventDefault();
 
     const fileUrl = link.href;
