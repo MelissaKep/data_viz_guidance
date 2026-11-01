@@ -1,3 +1,4 @@
+---
 layout: default
 title: Dot Distribution Map
 permalink: dotdistributionmap.html
