@@ -124,12 +124,12 @@ Include a clear title, geographic area, reference period, and source note. For s
 
 ### Examples
 
-***Static Dot Distribution Map***:This example demonstrates the use of a legend to explain the amount represented by each dot.
+***Static Dot Distribution Map***: This example demonstrates the use of a legend to explain the amount represented by each dot.
 
 ![Static dot distribution map example](assets/DotDistributionMap1.png)
 
 
-***Static Dot Distribution Map with Categories/Types***:This example uses color to distinguish categories and provides a legend explaining both the dot value and the category colors.
+***Static Dot Distribution Map with Categories/Types***: This example uses color to distinguish categories and provides a legend explaining both the dot value and the category colors.
 
 ![Categorical dot distribution map example](assets/DotDistributionMap2.jpg)
 
