@@ -108,7 +108,7 @@ A categorical legend uses distinct markers for unordered groups. A sequential le
 
   **Illustrative accessibility example:** Different marker shapes and line styles supplement color so that series remain distinguishable when color differences are difficult to perceive or when the chart is reproduced in grayscale.
 
-  ![Illustrative line-series legend using different colors, marker shapes, and line styles.](assets/legend-accessibility.png)
+  ![Illustrative line-series legend using different colors, marker shapes, and line styles.](assets/Accessible%20Legend%20Design%20Guide.png)
 - Check text and symbol contrast against the legend background. Small text, thin lines, and small swatches can be difficult to distinguish even when the colors themselves are different.
 - Consider common color vision deficiencies, including difficulty distinguishing red and green. Test palettes with a color-vision simulation or accessibility checker and revise combinations that become indistinguishable.
 - Use sufficiently large swatches and line samples so readers can identify the visual encoding. The marker should be large enough to show relevant patterns, borders, transparency, or line styles.
