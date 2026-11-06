@@ -3,7 +3,8 @@ layout: default
 title: Legends
 permalink: legend.html
 description: "Guidance and best practices for designing clear, accurate, and accessible data visualization legends."
-tag: Informational
+tag: 
+ - Informational
 ---
 
 # Legends
