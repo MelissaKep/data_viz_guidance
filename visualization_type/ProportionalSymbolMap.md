@@ -260,22 +260,96 @@ The implementation produces static and interactive map files and a prepared popu
 
 ### 8.3 Downloadable Example Outputs
 
-The repository includes the following outputs from the completed 1920-versus-2020 population map example.
+The repository includes the following outputs from the completed 1920-versus-2020 population map example. The CSV link uses a direct-download attribute so the browser saves it as a `.csv` file. The interactive HTML link opens the hosted HTML page in a new browser tab so the map can load and remain interactive.
 
-| Output | Description | Download |
-|---|---|---|
-| Static map (PNG) | Image preview of the population comparison map. | [Download population comparison PNG](https://raw.githubusercontent.com/melissakep/data_viz_guidance/main/Python%20Artifacts/population_comparison_1920_2020.png) |
-| Map (PDF) | PDF version of the population comparison map. | [Download population comparison PDF](https://raw.githubusercontent.com/melissakep/data_viz_guidance/main/Python%20Artifacts/population_comparison_1920_2020.pdf) |
-| Interactive map (HTML) | Browser-based interactive version of the map. | [Open interactive population comparison map](https://raw.githubusercontent.com/melissakep/data_viz_guidance/main/Python%20Artifacts/population_comparison_1920_2020_interactive.html) |
-| Prepared data (CSV) | Population values used in the visualization. | [Download population comparison data](https://raw.githubusercontent.com/melissakep/data_viz_guidance/main/Python%20Artifacts/population_comparison_1920_2020_data.csv) |
-| Run notes (TXT) | Records the data story, sources, method, outputs, run date, and Python version for the completed run. | [View run notes](https://raw.githubusercontent.com/melissakep/data_viz_guidance/main/Python%20Artifacts/run_notes.txt) |
-| Geographic input (ZIP) | 2020 TIGER/Line state boundary archive used as a geographic input. | [Download 2020 state boundary archive](https://raw.githubusercontent.com/melissakep/data_viz_guidance/main/Python%20Artifacts/tl_2020_us_state.zip) |
+<table>
+  <thead>
+    <tr>
+      <th>Output</th>
+      <th>Description</th>
+      <th>Access</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Static map (PNG)</td>
+      <td>Image preview of the population comparison map.</td>
+      <td>
+        <a href="https://melissakep.github.io/data_viz_guidance/Python%20Artifacts/population_comparison_1920_2020.png"
+           download="population_comparison_1920_2020.png"
+           class="download-file"
+           data-filename="population_comparison_1920_2020.png">
+          Download population comparison PNG
+        </a>
+      </td>
+    </tr>
+    <tr>
+      <td>Map (PDF)</td>
+      <td>PDF version of the population comparison map.</td>
+      <td>
+        <a href="https://melissakep.github.io/data_viz_guidance/Python%20Artifacts/population_comparison_1920_2020.pdf"
+           download="population_comparison_1920_2020.pdf"
+           class="download-file"
+           data-filename="population_comparison_1920_2020.pdf">
+          Download population comparison PDF
+        </a>
+      </td>
+    </tr>
+    <tr>
+      <td>Interactive map (HTML)</td>
+      <td>Browser-based interactive version of the map. This link opens the HTML page directly; it is intentionally not marked as a download.</td>
+      <td>
+        <a href="https://melissakep.github.io/data_viz_guidance/Python%20Artifacts/population_comparison_1920_2020_interactive.html"
+           target="_blank"
+           rel="noopener">
+          Open interactive population comparison map
+        </a>
+      </td>
+    </tr>
+    <tr>
+      <td>Prepared data (CSV)</td>
+      <td>Population values used in the visualization.</td>
+      <td>
+        <a href="https://melissakep.github.io/data_viz_guidance/Python%20Artifacts/population_comparison_1920_2020_data.csv"
+           download="population_comparison_1920_2020_data.csv"
+           class="download-file"
+           data-filename="population_comparison_1920_2020_data.csv">
+          Download population comparison data (CSV)
+        </a>
+      </td>
+    </tr>
+    <tr>
+      <td>Run notes (TXT)</td>
+      <td>Records the data story, sources, method, outputs, run date, and Python version for the completed run.</td>
+      <td>
+        <a href="https://melissakep.github.io/data_viz_guidance/Python%20Artifacts/run_notes.txt"
+           download="run_notes.txt"
+           class="download-file"
+           data-filename="run_notes.txt">
+          Download run notes
+        </a>
+      </td>
+    </tr>
+    <tr>
+      <td>Geographic input (ZIP)</td>
+      <td>2020 TIGER/Line state boundary archive used as a geographic input.</td>
+      <td>
+        <a href="https://melissakep.github.io/data_viz_guidance/Python%20Artifacts/tl_2020_us_state.zip"
+           download="tl_2020_us_state.zip"
+           class="download-file"
+           data-filename="tl_2020_us_state.zip">
+          Download 2020 state boundary archive
+        </a>
+      </td>
+    </tr>
+  </tbody>
+</table>
 
-The PNG and PDF are static outputs. The HTML file is the interactive output. The CSV is the prepared data output. The TIGER/Line ZIP is an input dataset rather than a generated output.
+The PNG and PDF are static outputs. The HTML file is the interactive output and should be opened in a browser rather than downloaded to view it. The CSV is the prepared data output. The TIGER/Line ZIP is an input dataset rather than a generated output.
 
 **Map preview**
 
-![U.S. Census proportional symbol map comparing population in 1920 and 2020](https://raw.githubusercontent.com/melissakep/data_viz_guidance/main/Python%20Artifacts/population_comparison_1920_2020.png)
+![U.S. Census proportional symbol map comparing population in 1920 and 2020](https://melissakep.github.io/data_viz_guidance/Python%20Artifacts/population_comparison_1920_2020.png)
 
 ### 8.4 Reproducibility and Adaptation
 
@@ -338,4 +412,5 @@ Before using or adapting the example:
 - [ ] A complementary data file is available when exact values are important.
 - [ ] The Python implementation has been executed and reviewed.
 - [ ] Source data, transformations, dependencies, and output metadata are documented.
+- [ ] The visualization has undergone the appropriate review.
 - [ ] The visualization has undergone the appropriate review.
