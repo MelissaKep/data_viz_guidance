@@ -136,7 +136,7 @@ A categorical legend uses distinct markers for unordered groups. A sequential le
 
   **Illustrative map-legend example:** The legend below uses a descriptive measure title, explicit percentage classes, descending order, consistent class labels, and a separate patterned treatment for unavailable data. The values are fictional and are included only to demonstrate legend structure.
 
-  ![Illustrative quantitative map legend with ordered percentage classes and a separate patterned unavailable-data category.](assets/legend-map-example.png)
+  ![Illustrative quantitative map legend with ordered percentage classes and a separate patterned unavailable-data category.](assets/Geographic%20and%20Thematic%20Map%20Legend%20Examples.png)
 - If class intervals are calculated dynamically, explain when and why the class breaks change. When comparing maps, use consistent class breaks if the goal is to compare values across places or time. If each map uses its own classification, disclose that the colors represent relative positions within each map rather than directly comparable values.
 - Do not imply that areas without data have a value of zero. Use a separate, clearly labeled treatment for no data, suppressed, unavailable, or not applicable values, and explain the distinction when readers could confuse these conditions.
 - If the map uses a national value as a reference, distinguish that reference from the data classes. Follow the survey-data restriction in **Best Practices > Avoid**.
