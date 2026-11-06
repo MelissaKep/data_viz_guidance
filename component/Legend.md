@@ -87,7 +87,7 @@ The recommendations below extend the original guidance with practical considerat
 
 #### Visual examples: matching legend design to the data
 
-The following illustrations were created for this guide to show common legend structures. They are explanatory examples, not official Census Bureau sample products.
+The following illustration was created for this guide to show common legend structures. They are explanatory examples, not official Census Bureau sample products.
 
 ![Examples of categorical, sequential, diverging, size, symbol, and line legends.](assets/Map%20Legend%20Types%20Infographic.png)
 
