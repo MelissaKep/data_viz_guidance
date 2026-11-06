@@ -210,8 +210,8 @@ The repository includes a Python script and a Jupyter Notebook version of the ex
 
 | File | Purpose | Recommended Use |
 |---|---|---|
-| [Download the proportional symbol map Python script](https://raw.githubusercontent.com/melissakep/data_viz_guidance/main/Python%20Artifacts/proportionalsymbolmap_example.py) | Standalone Python implementation of the 1920-versus-2020 population map. | Run in a Python environment or adapt for another project. |
-| [Open the proportional symbol map Jupyter Notebook](https://github.com/melissakep/data_viz_guidance/blob/main/Python%20Artifacts/ProportionalSymbolMap_Example.ipynb) | Notebook version of the example, with executable cells for reviewing the workflow. | Run interactively in Jupyter Notebook or a compatible notebook environment. |
+| [Download the proportional symbol map Python script (.py)](https://github.com/melissakep/data_viz_guidance/raw/refs/heads/main/Python%20Artifacts/proportionalsymbolmap_example.py?download=1) | Standalone Python implementation of the 1920-versus-2020 population map. | Run in a Python environment or adapt for another project. |
+| [Download the proportional symbol map Jupyter Notebook (.ipynb)](https://github.com/melissakep/data_viz_guidance/raw/refs/heads/main/Python%20Artifacts/ProportionalSymbolMap_Example.ipynb?download=1) | Notebook version of the example, with executable cells for reviewing the workflow. | Run interactively in Jupyter Notebook or a compatible notebook environment. |
 
 **Required packages**
 
