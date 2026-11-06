@@ -89,7 +89,7 @@ The recommendations below extend the original guidance with practical considerat
 
 The following illustrations were created for this guide to show common legend structures. They are explanatory examples, not official Census Bureau sample products.
 
-![Examples of categorical, sequential, diverging, size, symbol, and line legends.](assets/visualization_type/assets/Map%20Legend%20Types%20Infographic.png)
+![Examples of categorical, sequential, diverging, size, symbol, and line legends.](assets/Map%20Legend%20Types%20Infographic.png)
 
 A categorical legend uses distinct markers for unordered groups. A sequential legend shows an ordered progression. A diverging legend identifies a meaningful midpoint. Size and line keys should reproduce the visual encoding used in the chart or map.
 
