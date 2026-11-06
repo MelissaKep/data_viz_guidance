@@ -3,6 +3,7 @@ layout: default
 title: Legends
 permalink: legend.html
 description: "Guidance and best practices for designing clear, accurate, and accessible data visualization legends."
+tag: Informational
 ---
 
 # Legends
@@ -137,6 +138,10 @@ A categorical legend uses distinct markers for unordered groups. A sequential le
   **Illustrative map-legend example:** The legend below uses a descriptive measure title, explicit percentage classes, descending order, consistent class labels, and a separate patterned treatment for unavailable data. The values are fictional and are included only to demonstrate legend structure.
 
   ![Illustrative quantitative map legend with ordered percentage classes and a separate patterned unavailable-data category.](assets/Geographic%20and%20Thematic%20Map%20Legend%20Examples.png)
+
+  **Supplementary choropleth layout example:** The following illustrative map shows a U.S. state choropleth with a centered quantitative color legend. It demonstrates map-and-legend placement; it is not an example of unavailable-data treatment.
+
+  ![U.S. state choropleth map with a centered quantitative color legend.](assets/US%20State%20Choropleth%20and%20Color%20Legend.png)
 - If class intervals are calculated dynamically, explain when and why the class breaks change. When comparing maps, use consistent class breaks if the goal is to compare values across places or time. If each map uses its own classification, disclose that the colors represent relative positions within each map rather than directly comparable values.
 - Do not imply that areas without data have a value of zero. Use a separate, clearly labeled treatment for no data, suppressed, unavailable, or not applicable values, and explain the distinction when readers could confuse these conditions.
 - If the map uses a national value as a reference, distinguish that reference from the data classes. Follow the survey-data restriction in **Best Practices > Avoid**.
@@ -190,25 +195,28 @@ A categorical legend uses distinct markers for unordered groups. A sequential le
 
 The examples below use a consistent comparison format to make the design lesson easier to scan. Each comparison places a **Failed Example** beside a **Preferred Example**, followed by a short explanation of why the design fails or meets the guidance. The original Census Bureau illustrations and their explanations are retained. Where the original material provides only a not-recommended example, the preferred side identifies the design correction rather than presenting an invented Census Bureau illustration.
 
+
 ### Comparison 1: Keep unavailable data separate from the quantitative scale
 
 <table style="width:100%; border-collapse:separate; border-spacing:12px; table-layout:fixed;">
   <tr>
     <td style="width:50%; vertical-align:top; border:1px solid #d8dee4; border-radius:6px; padding:16px;">
       <h3>⚠️ Failed Example</h3>
-      <p><strong>Problem:</strong> Treating unavailable or “no data” areas as though they were part of the numeric sequence, or using the lowest-value color to represent missing information.</p>
+      <p><strong>Problem:</strong> Showing a quantitative choropleth legend without a separate category for unavailable or missing data when some geographic areas do not have reported values.</p>
+      <p><img src="assets/US%20State%20Choropleth%20and%20Color%20Legend.png" alt="U.S. state choropleth using a sequential teal color scale with no separately identified unavailable-data category." style="max-width:100%; height:auto;" /></p>
       <h4>Why it Fails</h4>
-      <p>Readers may interpret areas without data as having the lowest measured value. Missing information is not a numeric observation and should not be placed on the quantitative color ramp.</p>
+      <p>The legend only identifies quantitative percentage ranges and does not provide a separate treatment for unavailable data. If any states lack reported values, readers cannot distinguish those areas from states assigned a quantitative class. Missing information should never be interpreted as zero or as the lowest measured value.</p>
     </td>
     <td style="width:50%; vertical-align:top; border:1px solid #d8dee4; border-radius:6px; padding:16px;">
       <h3>✅ Preferred Example</h3>
-      <p><strong>Choropleth map with quantitative (sequential) data and a separate “no data” class.</strong></p>
+      <p><strong>Choropleth map with quantitative (sequential) data and a separate "no data" class.</strong></p>
       <p><img src="assets/Legend03.png" alt="Choropleth map legend with a sequential quantitative scale and a separate no-data class." style="max-width:100%; height:auto;" /></p>
       <h4>Why it Meets the Requirements</h4>
-      <p>The “no data” class is separate from the quantitative sequence and cannot be mistaken for the lowest value. Use a distinct neutral or patterned treatment and label it clearly.</p>
+      <p>The "no data" class is separate from the quantitative sequence and cannot be mistaken for the lowest value. Use a distinct neutral or patterned treatment and label it clearly.</p>
     </td>
   </tr>
 </table>
+
 
 ### Comparison 2: Make diverging scales and reference values clear
 
@@ -217,6 +225,7 @@ The examples below use a consistent comparison format to make the design lesson 
     <td style="width:50%; vertical-align:top; border:1px solid #d8dee4; border-radius:6px; padding:16px;">
       <h3>⚠️ Failed Example</h3>
       <p><strong>Problem:</strong> Using a diverging scale without a meaningful midpoint, failing to identify the midpoint, or incorporating a national reference value into survey-data class breaks.</p>
+      <p><img src="assets/Misleading%20Broadband%20Access%20Map.png" alt="Illustrative failed choropleth using a blue-to-red diverging scale without a clearly identified meaningful midpoint; the national reference value is also positioned at a class boundary." style="max-width:100%; height:auto;" /></p>
       <h4>Why it Fails</h4>
       <p>A diverging palette implies that values depart in two directions from a meaningful center. An arbitrary midpoint can mislead readers. For survey data, incorporating a national average, value, or median into the data class breaks conflicts with the specific guidance retained above.</p>
     </td>
@@ -231,49 +240,9 @@ The examples below use a consistent comparison format to make the design lesson 
   </tr>
 </table>
 
-### Comparison 3: Distinguish thematic data from geographic reference features
 
-<table style="width:100%; border-collapse:separate; border-spacing:12px; table-layout:fixed;">
-  <tr>
-    <td style="width:50%; vertical-align:top; border:1px solid #d8dee4; border-radius:6px; padding:16px;">
-      <h3>⚠️ Failed Example</h3>
-      <p><strong>Problem:</strong> Combining thematic data classes and geographic reference boundaries in one unclear key, or leaving map features unexplained when they are necessary to interpret the map.</p>
-      <h4>Why it Fails</h4>
-      <p>Readers may not know which symbols describe the data and which identify geographic context. Unclear keys make it harder to interpret the map correctly.</p>
-    </td>
-    <td style="width:50%; vertical-align:top; border:1px solid #d8dee4; border-radius:6px; padding:16px;">
-      <h3>✅ Preferred Example</h3>
-      <p><strong>Choropleth map with state data and Census Region boundaries.</strong></p>
-      <p><img src="assets/Legend06.png" alt="Choropleth map legend distinguishing state-level thematic data from Census Region boundaries." style="max-width:100%; height:auto;" /></p>
-      <h4>Why it Meets the Requirements</h4>
-      <p>The map includes the state in its main title and provides additional notes. The legend distinguishes the thematic data from geographic reference boundaries when both are needed to interpret the map.</p>
-    </td>
-  </tr>
-</table>
 
-### Comparison 4: Explain statistical significance and multiple visual encodings
-
-<table style="width:100%; border-collapse:separate; border-spacing:12px; table-layout:fixed;">
-  <tr>
-    <td style="width:50%; vertical-align:top; border:1px solid #d8dee4; border-radius:6px; padding:16px;">
-      <h3>⚠️ Failed Example</h3>
-      <p><strong>Problem:</strong> Using a significance symbol without defining it, omitting the confidence-level note when required, or combining multiple visual encodings without explaining what each represents.</p>
-      <h4>Why it Fails</h4>
-      <p>Readers cannot determine what an asterisk means or whether differences are statistically significant. They may also confuse a size encoding with a color encoding when both represent different measures.</p>
-    </td>
-    <td style="width:50%; vertical-align:top; border:1px solid #d8dee4; border-radius:6px; padding:16px;">
-      <h3>✅ Preferred Example</h3>
-      <p><strong>Map with significance notes and proportional symbols representing two variables.</strong></p>
-      <p><img src="assets/Legend07.png" alt="Map legend using an asterisk to identify statistical significance." style="max-width:100%; height:auto;" /></p>
-      <p><img src="assets/Legend19.png" alt="Supplementary map legend and note associated with statistical significance." style="max-width:100%; height:auto;" /></p>
-      <p><img src="assets/Legend08.png" alt="Proportional symbol map legend where circle size represents total events and color represents year." style="max-width:100%; height:auto;" /></p>
-      <h4>Why it Meets the Requirements</h4>
-      <p>The significance symbol is identified in the legend and supported by a note about the confidence level for survey data. The proportional-symbol example separates the size and color encodings so readers can identify the measure represented by each.</p>
-    </td>
-  </tr>
-</table>
-
-### Comparison 5: Represent quantitative and qualitative data with the right legend type
+### Comparison 3: Represent quantitative and qualitative data with the right legend type
 
 <table style="width:100%; border-collapse:separate; border-spacing:12px; table-layout:fixed;">
   <tr>
@@ -296,50 +265,9 @@ The examples below use a consistent comparison format to make the design lesson 
   </tr>
 </table>
 
-### Comparison 6: Make symbol, size, and dot legends interpretable
 
-<table style="width:100%; border-collapse:separate; border-spacing:12px; table-layout:fixed;">
-  <tr>
-    <td style="width:50%; vertical-align:top; border:1px solid #d8dee4; border-radius:6px; padding:16px;">
-      <h3>⚠️ Failed Example</h3>
-      <p><strong>Problem:</strong> Showing different symbol sizes, fills, or dots without explaining what they represent, or using a text note when a clear graphical key would work.</p>
-      <h4>Why it Fails</h4>
-      <p>Readers cannot infer whether symbol size represents counts, rates, or another quantity. A dot distribution map is also ambiguous if the value represented by each dot is not stated.</p>
-    </td>
-    <td style="width:50%; vertical-align:top; border:1px solid #d8dee4; border-radius:6px; padding:16px;">
-      <h3>✅ Preferred Example</h3>
-      <p><strong>Graduated symbols, proportional symbols, and dot distribution.</strong></p>
-      <p><img src="assets/Legend09.png" alt="Graduated symbol map legend with a color ramp and symbol-size classes." style="max-width:100%; height:auto;" /></p>
-      <p><img src="assets/Legend20.png" alt="Dot distribution map legend." style="max-width:100%; height:auto;" /></p>
-      <h4>Why it Meets the Requirements</h4>
-      <p>Use a graphical key that reproduces the map's symbol sizes and fills. State what each dot represents and whether dots show individual observations or an aggregated quantity.</p>
-    </td>
-  </tr>
-</table>
 
-### Comparison 7: Order horizontal legends to match the visualization
-
-<table style="width:100%; border-collapse:separate; border-spacing:12px; table-layout:fixed;">
-  <tr>
-    <td style="width:50%; vertical-align:top; border:1px solid #d8dee4; border-radius:6px; padding:16px;">
-      <h3>⚠️ Failed Example</h3>
-      <p><strong>Problem:</strong> Arranging legend items in an order that conflicts with the chart, time sequence, or direction of the data.</p>
-      <h4>Why it Fails</h4>
-      <p>Readers must repeatedly move between the legend and the visualization to work out which item corresponds to each mark. An inconsistent order slows interpretation and can cause errors.</p>
-    </td>
-    <td style="width:50%; vertical-align:top; border:1px solid #d8dee4; border-radius:6px; padding:16px;">
-      <h3>✅ Preferred Example</h3>
-      <p><strong>Horizontal legends arranged in the same order as the chart, time sequence, or visual direction.</strong></p>
-      <p><img src="assets/Legend11.png" alt="Horizontal legend ordered from left to right to match the chart." style="max-width:100%; height:auto;" /></p>
-      <p><img src="assets/Legend12.png" alt="Horizontal legend ordered chronologically." style="max-width:100%; height:auto;" /></p>
-      <p><img src="assets/Legend13.png" alt="Horizontal legend ordered to reflect the direction of the visualization." style="max-width:100%; height:auto;" /></p>
-      <h4>Why it Meets the Requirements</h4>
-      <p>The legend follows the way readers scan the visualization: left to right, in logical time order, or in the direction represented by the data.</p>
-    </td>
-  </tr>
-</table>
-
-### Comparison 8: Use consistent precision and nonoverlapping class ranges
+### Comparison 4: Use consistent precision and nonoverlapping class ranges
 
 <table style="width:100%; border-collapse:separate; border-spacing:12px; table-layout:fixed;">
   <tr>
@@ -361,32 +289,62 @@ The examples below use a consistent comparison format to make the design lesson 
   </tr>
 </table>
 
-### Comparison 9: Use text notes only when a graphical legend is not practical
 
-<table style="width:100%; border-collapse:separate; border-spacing:12px; table-layout:fixed;">
-  <tr>
-    <td style="width:50%; vertical-align:top; border:1px solid #d8dee4; border-radius:6px; padding:16px;">
-      <h3>⚠️ Failed Example</h3>
-      <p><strong>Problem:</strong> Replacing a straightforward graphical legend with a long explanatory note, even though the visual encoding can be shown directly.</p>
-      <h4>Why it Fails</h4>
-      <p>Readers have to interpret prose instead of quickly matching a visual marker to its meaning. This can make the visualization harder to scan.</p>
-    </td>
-    <td style="width:50%; vertical-align:top; border:1px solid #d8dee4; border-radius:6px; padding:16px;">
-      <h3>✅ Preferred Example</h3>
+### Additional preferred examples
+
+The following examples are retained as standalone preferred-design references. They are shown separately because the source material did not include a corresponding failed-example visual for each topic.
+
+#### Distinguish thematic data from geographic reference features
+
+<h3>Example</h3>
+      <p><strong>Choropleth map with state data and Census Region boundaries.</strong></p>
+      <p><img src="assets/Legend06.png" alt="Choropleth map legend distinguishing state-level thematic data from Census Region boundaries." style="max-width:100%; height:auto;" /></p>
+      <h4>Why this Example Works</h4>
+      <p>The map includes the state in its main title and provides additional notes. The legend distinguishes the thematic data from geographic reference boundaries when both are needed to interpret the map.</p>
+
+#### Explain statistical significance and multiple visual encodings
+
+<h3>Example</h3>
+      <p><strong>Map with significance notes and proportional symbols representing two variables.</strong></p>
+      <p><img src="assets/Legend07.png" alt="Map legend using an asterisk to identify statistical significance." style="max-width:100%; height:auto;" /></p>
+      <p><img src="assets/Legend19.png" alt="Supplementary map legend and note associated with statistical significance." style="max-width:100%; height:auto;" /></p>
+      <p><img src="assets/Legend08.png" alt="Proportional symbol map legend where circle size represents total events and color represents year." style="max-width:100%; height:auto;" /></p>
+      <h4>Why this Example Works</h4>
+      <p>The significance symbol is identified in the legend and supported by a note about the confidence level for survey data. The proportional-symbol example separates the size and color encodings so readers can identify the measure represented by each.</p>
+
+#### Make symbol, size, and dot legends interpretable
+
+<h3>Example</h3>
+      <p><strong>Graduated symbols, proportional symbols, and dot distribution.</strong></p>
+      <p><img src="assets/Legend09.png" alt="Graduated symbol map legend with a color ramp and symbol-size classes." style="max-width:100%; height:auto;" /></p>
+      <p><img src="assets/Legend20.png" alt="Dot distribution map legend." style="max-width:100%; height:auto;" /></p>
+      <h4>Why this Example Works</h4>
+      <p>Use a graphical key that reproduces the map's symbol sizes and fills. State what each dot represents and whether dots show individual observations or an aggregated quantity.</p>
+
+#### Order horizontal legends to match the visualization
+
+<h3>Example</h3>
+      <p><strong>Horizontal legends arranged in the same order as the chart, time sequence, or visual direction.</strong></p>
+      <p><img src="assets/Legend11.png" alt="Horizontal legend ordered from left to right to match the chart." style="max-width:100%; height:auto;" /></p>
+      <p><img src="assets/Legend12.png" alt="Horizontal legend ordered chronologically." style="max-width:100%; height:auto;" /></p>
+      <p><img src="assets/Legend13.png" alt="Horizontal legend ordered to reflect the direction of the visualization." style="max-width:100%; height:auto;" /></p>
+      <h4>Why this Example Works</h4>
+      <p>The legend follows the way readers scan the visualization: left to right, in logical time order, or in the direction represented by the data.</p>
+
+#### Use text notes only when a graphical legend is not practical
+
+<h3>Example</h3>
       <p><strong>Use a graphical size key when possible; retain a text note only when needed.</strong></p>
       <p><img src="assets/Legend14.png" alt="Original limited-use example where a text note explains what circle size represents." style="max-width:100%; height:auto;" /></p>
-      <h4>Why it Meets the Requirements</h4>
+      <h4>Why this Example Works</h4>
       <p>The original example is identified as not recommended but acceptable in limited cases when no better option exists and the legend cannot graphically describe the classes. Prefer a clear symbol-size key whenever practical.</p>
-    </td>
-  </tr>
-</table>
 
 ### Additional original examples and references
 
 The following original examples are retained as additional references:
 
-- **Proportional symbol map:** Example 6 above uses circle size for the total number of events and color fill for the year. The legend should explain both encodings.
-- **Horizontal legend examples:** Examples 10 above demonstrate order that follows the chart, chronology, and direction of the visualization.
+- **Proportional symbol map:** The statistical-significance and multiple-encoding examples above use circle size for the total number of events and color fill for the year. The legend should explain both encodings.
+- **Horizontal legend examples:** The preferred horizontal-legend examples above demonstrate order that follows the chart, chronology, and direction of the visualization.
 - **Original source material:** [Poverty in the United States: 2023](https://www2.census.gov/library/publications/2024/demo/p60-283.pdf) and [Demobase Angola and Namibia](https://www.census.gov/library/visualizations/time-series/demo/demobase-angola-and-namibia.html).
 
 ## Developer Quality Checklist
