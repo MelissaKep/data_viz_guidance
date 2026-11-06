@@ -199,37 +199,52 @@ Period/Vintage\]. \[Additional Sponsoring Agency, if applicable\].
 
 ### Recommended Source Components
 
-  -----------------------------------------------------------------------
-  Component               Description             Example
-  ----------------------- ----------------------- -----------------------
-  Dataset Name            Official name of the    American Community
-                          dataset or data         Survey
-                          product.                
-
-  Data Provider           Agency responsible for  U.S. Census Bureau
-                          producing or collecting 
-                          the data.               
-
-  Sponsoring Agency       Agency responsible for  Department of Commerce
-                          sponsoring or funding   
-                          the data, when          
-                          applicable.             
-
-  Reference Period        Year or period          2024
-                          represented by the      
-                          data.                   
-
-  Table/Variable          Specific table or       B01003
-                          variable identifiers,   
-                          when applicable.        
-
-  Retrieval Date          Date the data were      October 20, 2026
-                          retrieved, when         
-                          relevant.               
-
-  Source URL              Direct link to the      Census API endpoint
-                          dataset, table, or API. 
-  -----------------------------------------------------------------------
+<table>
+  <thead>
+    <tr>
+      <th style="width: 20%;">Component</th>
+      <th style="width: 45%;">Description</th>
+      <th style="width: 35%;">Example</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Dataset Name</strong></td>
+      <td>Official name of the dataset or data product.</td>
+      <td>American Community Survey</td>
+    </tr>
+    <tr>
+      <td><strong>Data Provider</strong></td>
+      <td>Agency responsible for producing or collecting the data.</td>
+      <td>U.S. Census Bureau</td>
+    </tr>
+    <tr>
+      <td><strong>Sponsoring Agency</strong></td>
+      <td>Agency responsible for sponsoring or funding the data, when applicable.</td>
+      <td>Department of Commerce</td>
+    </tr>
+    <tr>
+      <td><strong>Reference Period</strong></td>
+      <td>Year or period represented by the data.</td>
+      <td>2024</td>
+    </tr>
+    <tr>
+      <td><strong>Table/Variable</strong></td>
+      <td>Specific table or variable identifiers, when applicable.</td>
+      <td>B01003</td>
+    </tr>
+    <tr>
+      <td><strong>Retrieval Date</strong></td>
+      <td>Date the data were retrieved, when relevant.</td>
+      <td>October 20, 2026</td>
+    </tr>
+    <tr>
+      <td><strong>Source URL</strong></td>
+      <td>Direct link to the dataset, table, or API.</td>
+      <td>Census API endpoint</td>
+    </tr>
+  </tbody>
+</table>
 
 ### Example Source Statements
 
