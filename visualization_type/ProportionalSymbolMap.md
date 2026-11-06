@@ -206,7 +206,7 @@ The workflow should validate the population records and geographic joins, preser
 
 ### 8.2 Python
 
-The repository includes a standalone Python script and a Jupyter Notebook version of the proportional symbol map example. The table below provides direct download links to the implementation and the supporting example outputs.
+The repository includes a standalone Python script and a Jupyter Notebook version of the proportional symbol map example. The table below contains only the executable source files. Generated maps and supporting data are listed separately in Section 8.3.
 
 <table>
   <thead>
@@ -240,61 +240,8 @@ The repository includes a standalone Python script and a Jupyter Notebook versio
       <td>Notebook version of the implementation, with executable cells for reviewing the workflow.</td>
       <td>Run interactively in Google Colab or Jupyter Notebook.</td>
     </tr>
-    <tr>
-      <td>
-        <a href="https://melissakep.github.io/data_viz_guidance/Python%20Artifacts/population_comparison_1920_2020.png"
-           download="population_comparison_1920_2020.png"
-           class="download-file"
-           data-filename="population_comparison_1920_2020.png">
-          Download Population Comparison Map (PNG)
-        </a>
-      </td>
-      <td>Static map comparing state and territorial population counts in 1920 and 2020.</td>
-      <td>View the completed visualization or include it in documentation, reports, and presentations.</td>
-    </tr>
-    <tr>
-      <td>
-        <a href="https://melissakep.github.io/data_viz_guidance/Python%20Artifacts/population_comparison_1920_2020.pdf"
-           download="population_comparison_1920_2020.pdf"
-           class="download-file"
-           data-filename="population_comparison_1920_2020.pdf">
-          Download Population Comparison Map (PDF)
-        </a>
-      </td>
-      <td>PDF export of the 1920 and 2020 population comparison map.</td>
-      <td>Use for printing, reports, or high-quality reference.</td>
-    </tr>
-    <tr>
-      <td>
-        <a href="https://melissakep.github.io/data_viz_guidance/Python%20Artifacts/population_comparison_1920_2020_data.csv"
-           download="population_comparison_1920_2020_data.csv"
-           class="download-file"
-           data-filename="population_comparison_1920_2020_data.csv">
-          Download Population Comparison Data (CSV)
-        </a>
-      </td>
-      <td>Population data used in the visualization, including the values represented by the 1920 and 2020 symbols.</td>
-      <td>Review mapped values, validate the output, or use the data for additional analysis and visualizations.</td>
-    </tr>
-    <tr>
-      <td>
-        <a href="https://melissakep.github.io/data_viz_guidance/Python%20Artifacts/population_comparison_1920_2020_interactive.html"
-           download="population_comparison_1920_2020_interactive.html"
-           class="download-file"
-           data-filename="population_comparison_1920_2020_interactive.html">
-          Download Interactive Population Comparison Map (HTML)
-        </a>
-      </td>
-      <td>Interactive HTML version of the map, allowing users to explore the visualization and inspect population values through hover information.</td>
-      <td>Open in a web browser to explore the completed map without running the Python code.</td>
-    </tr>
   </tbody>
 </table>
-
-**Supporting input and run documentation**
-
-- [Download run notes](https://melissakep.github.io/data_viz_guidance/Python%20Artifacts/run_notes.txt) — records the data story, sources, method, generated outputs, run date, and Python version.
-- [Download 2020 TIGER/Line state boundary archive](https://melissakep.github.io/data_viz_guidance/Python%20Artifacts/tl_2020_us_state.zip) — geographic boundary input used by the mapping example.
 
 **Required packages**
 
@@ -309,11 +256,7 @@ Install the packages required by the script in the Python environment used to ru
 
 **Expected outputs**
 
-- A static PNG map.
-- A PDF map.
-- A CSV file containing the population data used in the visualization.
-- An interactive HTML map.
-- Run notes documenting the execution details.
+The implementation produces static and interactive map files and a prepared population dataset. Download links to the completed example outputs and its supporting input files are provided in Section 8.3.
 
 ### 8.3 Downloadable Example Outputs
 
