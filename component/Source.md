@@ -1,9 +1,9 @@
 ---
-description: Guidance for citing and documenting data sources used in
-  data visualizations.
 layout: default
-permalink: source.html
 title: Sources
+permalink: source.html
+description: "Guidance for citing and documenting data sources used in data visualizations."
+tags: informational
 ---
 
 # Sources
