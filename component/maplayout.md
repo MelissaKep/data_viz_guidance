@@ -356,9 +356,3 @@ Use this checklist before publishing or handing off a map. Items marked “where
 - R-spatial. [sf package](https://r-spatial.github.io/sf/).
 - Leaflet. [Documentation](https://leafletjs.com/reference.html).
 - MapLibre GL JS. [Documentation](https://maplibre.org/maplibre-gl-js/docs/).
-
----
-
-**Original-content preservation note:** The original front matter, title, permalink, description, three map-format descriptions, three example links, cross-references to related components, all original geographic-placement and projection guidance, the Alaska and Hawaii extent guidance, Section 508 reference, D.C. callout recommendation, map-frame/neat-line recommendation, north-arrow recommendation, labeling/font recommendations, small-area state-label caution, and original Examples 1–9 have been retained. The original material was reorganized into the sections above and lightly edited for spelling, punctuation, and readability. The original editorial marker `[KF2.1]` was retained in context. No substantive original guidance was intentionally removed.
-
-**Asset note:** The six comparison image references point to the files uploaded to `component/assets/`: `Maplayout_Failed1.jpg`, `Maplayout_Failed2.jpg`, `Maplayout_Failed3.jpg`, `Maplayout_Preferred1.jpg`, `Maplayout_Preferred2jpg.png`, and `Maplayout_Preferred3.jpg`. The second preferred image filename includes the `.png.png` suffix shown in the repository upload screenshot; the Markdown reference preserves that exact filename. The original `MapLayout01.png`–`MapLayout16.png` references are also preserved.
