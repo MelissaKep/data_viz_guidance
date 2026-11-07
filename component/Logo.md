@@ -189,6 +189,33 @@ Examples shown:
 4. **Logo-only versus logo plus source statement:** A logo does not identify a dataset, vintage, or URL; retain a complete citation/source statement.
 5. **Overlay versus reserved branding area:** A logo must not cover plotted data; position it outside the data region.
 
+#### Example 1: Static data visualization with a branded footer
+
+![Example of a static Census Bureau data visualization with a distinct footer containing the Census Bureau logo, Department of Commerce identification, and source information.](component/assets/census-logo-visualization1.jpeg)
+
+This manufacturing pay chart demonstrates how agency identification and source information can be placed in a dedicated footer below the data-display area. The logo and Department of Commerce identification are visually separated from the chart, while the source statement appears on the opposite side of the footer. The chart also retains its title, measure, units, explanatory note, and data source information above the footer.
+
+**What to apply:**
+- Reserve a footer area for the agency identity rather than placing the logo over the chart.
+- Keep the source statement visible and distinct from the logo.
+- Preserve enough space for the chart's explanatory note and other context before the footer begins.
+- Check the logo and source text at the final export size; small footer text can become difficult to read when the visualization is reduced.
+
+#### Example 2: Interactive dashboard with a persistent branded footer
+
+![Example of an interactive Census Bureau dashboard with filter controls, a multi-category visualization, and a footer containing agency identification and source information.](component/assets/census-logo-visualization2.png)
+
+This income distribution dashboard demonstrates how agency identification can remain visible in an interactive product with filters and a larger visualization area. The filter panel is separated from the chart, and the footer places the Census Bureau identification on the left and source information on the right. The dark footer also provides a consistent visual boundary between the dashboard content and its attribution.
+
+**What to apply:**
+- Keep branding outside the interactive chart area so it does not compete with filters, category labels, or data marks.
+- Maintain a consistent footer across dashboard states and filter selections.
+- Include the source title, reference years, and a link or other locator that helps users find the underlying data.
+- Verify that the footer remains readable at smaller viewport widths and in exported or embedded views.
+- Ensure the logo has meaningful alternative text when it conveys agency identity not already provided in adjacent text.
+
+These examples illustrate layout approaches, not blanket approval of every visual or branding detail shown. Confirm that the logo treatment, endorsement lockup, wording, and use are appropriate for the product's publisher and audience. The examples do not replace the current Census Bureau branding requirements or the source-citation requirements described above.
+
 ## 7. Census Data Example
 
 - **Analytical question:** Which states had the largest total resident populations in 2023?
