@@ -155,7 +155,7 @@ These recommendations extend the original map conventions with general cartograp
 
 ## Examples
 
-The comparisons below are original illustrative graphics created for this developer guide. They are not official Census Bureau examples and do not represent actual Census estimates or authoritative geographic boundaries. The original Census Bureau examples are retained afterward with their original numbering and image references.
+The comparisons below use the six image files stored in `component/assets/`. Each row pairs a failed layout example on the left with its preferred counterpart on the right. The examples are instructional illustrations; they are not official Census Bureau maps or authoritative geographic boundary data.
 
 ### Geographic arrangement and extent
 
@@ -163,17 +163,17 @@ The comparisons below are original illustrative graphics created for this develo
   <tr>
     <td style="width:50%; vertical-align:top; border:1px solid #d8dee4; border-radius:6px; padding:16px;">
       <h3>⚠️ Failed Example</h3>
-      <img src="assets/map-layout-failed-geography.svg" alt="Illustrative incorrect U.S. map composition with Alaska placed below Hawaii and a detached Puerto Rico inset" style="width:100%; height:auto;" />
-      <p>Alaska is placed below Hawaii and the separated areas do not follow a recognizable U.S. map arrangement.</p>
+      <img src="assets/Maplayout_Failed1.jpg" alt="Failed example showing an incorrect arrangement of U.S. geographic areas" style="width:100%; height:auto;" />
+      <p>Geographic areas are not arranged in their familiar relative positions.</p>
       <h4>Why it Fails</h4>
-      <p>The placement weakens the reader's mental map of the United States and makes it harder to relate the separated geographic areas to the mainland.</p>
+      <p>Placing separated areas in unexpected positions can weaken geographic context and make it harder for readers to relate the insets to the contiguous United States.</p>
     </td>
     <td style="width:50%; vertical-align:top; border:1px solid #d8dee4; border-radius:6px; padding:16px;">
       <h3>✅ Preferred Example</h3>
-      <img src="assets/map-layout-preferred-geography.svg" alt="Illustrative U.S. map composition with Alaska upper left, Hawaii lower left, and Puerto Rico lower right" style="width:100%; height:auto;" />
-      <p>Separated areas are positioned consistently around the conterminous United States.</p>
-      <h4>Why it Meets the Requirements</h4>
-      <p>The arrangement follows the original Census Bureau map-layout convention and preserves familiar geographic relationships. The shapes are schematic, not boundary data.</p>
+      <img src="assets/Maplayout_Preferred1.jpg" alt="Preferred example showing U.S. geographic areas arranged in their familiar relative positions" style="width:100%; height:auto;" />
+      <p>Alaska, Hawaii, and Puerto Rico are positioned consistently around the contiguous United States, when those areas are relevant to the map.</p>
+      <h4>Why it Meets the Guidance</h4>
+      <p>The arrangement follows the original Census Bureau map-layout convention and preserves familiar geographic relationships.</p>
     </td>
   </tr>
 </table>
@@ -184,17 +184,17 @@ The comparisons below are original illustrative graphics created for this develo
   <tr>
     <td style="width:50%; vertical-align:top; border:1px solid #d8dee4; border-radius:6px; padding:16px;">
       <h3>⚠️ Failed Example</h3>
-      <img src="assets/map-layout-failed-insets.svg" alt="Illustrative map with detached Alaska and Hawaii panels, no inset boundaries, and no common map frame" style="width:100%; height:auto;" />
-      <p>Separate geographic panels float without clear boundaries or a shared layout.</p>
+      <img src="assets/Maplayout_Failed2.jpg" alt="Failed example showing unclear or poorly organized map frames and inset areas" style="width:100%; height:auto;" />
+      <p>Separate geographic views are difficult to distinguish from the primary map and from one another.</p>
       <h4>Why it Fails</h4>
-      <p>Readers may not understand which inset belongs to the map, and the relationship between the main view and separated areas is visually ambiguous.</p>
+      <p>Without clear frames, boundaries, or labels, readers may not understand which inset belongs to the map or what geographic area it represents.</p>
     </td>
     <td style="width:50%; vertical-align:top; border:1px solid #d8dee4; border-radius:6px; padding:16px;">
       <h3>✅ Preferred Example</h3>
-      <img src="assets/map-layout-preferred-insets.svg" alt="Illustrative map with a common outer frame, clearly outlined inset panels, and labels for each geographic view" style="width:100%; height:auto;" />
-      <p>A common frame and labeled inset panels make the composition easier to scan.</p>
-      <h4>Why it Meets the Requirements</h4>
-      <p>The layout groups related views and uses neat lines to distinguish independent data frames, consistent with the original additional recommendation.</p>
+      <img src="assets/Maplayout_Preferred2jpg.png" alt="Preferred example showing clearly organized map frames and labeled inset areas" style="width:100%; height:auto;" />
+      <p>A common frame and clearly distinguished, labeled inset panels organize the separate geographic views.</p>
+      <h4>Why it Meets the Guidance</h4>
+      <p>The layout groups related views and uses neat lines to distinguish independent data frames, consistent with the original map-layout recommendations.</p>
     </td>
   </tr>
 </table>
@@ -205,17 +205,17 @@ The comparisons below are original illustrative graphics created for this develo
   <tr>
     <td style="width:50%; vertical-align:top; border:1px solid #d8dee4; border-radius:6px; padding:16px;">
       <h3>⚠️ Failed Example</h3>
-      <img src="assets/map-layout-failed-comparison.svg" alt="Illustrative comparison panels with inconsistent extents, different color meanings, and unlabeled scale differences" style="width:100%; height:auto;" />
-      <p>Two map panels use different extents and color breaks without explaining the differences.</p>
+      <img src="assets/Maplayout_Failed3.jpg" alt="Failed example showing map comparison panels with inconsistent scale, extent, or visual encoding" style="width:100%; height:auto;" />
+      <p>Map panels intended for comparison use inconsistent scales, geographic extents, or color classifications without explaining the differences.</p>
       <h4>Why it Fails</h4>
-      <p>Visual differences may be caused by the layout and classification rather than by the data. Readers can incorrectly compare the panels as if they shared one scale.</p>
+      <p>Readers may attribute visual differences to the data when they are actually caused by different map scales, extents, or classification methods.</p>
     </td>
     <td style="width:50%; vertical-align:top; border:1px solid #d8dee4; border-radius:6px; padding:16px;">
       <h3>✅ Preferred Example</h3>
-      <img src="assets/map-layout-preferred-comparison.svg" alt="Illustrative small-multiple map panels aligned to the same extent with a shared legend and period labels" style="width:100%; height:auto;" />
-      <p>Comparable map panels share the same extent, visual encoding, and legend.</p>
-      <h4>Why it Meets the Requirements</h4>
-      <p>Consistent scales and classification make differences easier to interpret. Period labels and a shared legend make the comparison self-contained.</p>
+      <img src="assets/Maplayout_Preferred3.jpg" alt="Preferred example showing map comparison panels with consistent scale, extent, and visual encoding" style="width:100%; height:auto;" />
+      <p>Comparable map panels use consistent geographic extents, visual encoding, and legends, with reference periods clearly identified.</p>
+      <h4>Why it Meets the Guidance</h4>
+      <p>Consistent scales and classification make differences easier to interpret. Clear period labels and a shared legend help make the comparison understandable on its own.</p>
     </td>
   </tr>
 </table>
@@ -361,4 +361,4 @@ Use this checklist before publishing or handing off a map. Items marked “where
 
 **Original-content preservation note:** The original front matter, title, permalink, description, three map-format descriptions, three example links, cross-references to related components, all original geographic-placement and projection guidance, the Alaska and Hawaii extent guidance, Section 508 reference, D.C. callout recommendation, map-frame/neat-line recommendation, north-arrow recommendation, labeling/font recommendations, small-area state-label caution, and original Examples 1–9 have been retained. The original material was reorganized into the sections above and lightly edited for spelling, punctuation, and readability. The original editorial marker `[KF2.1]` was retained in context. No substantive original guidance was intentionally removed.
 
-**Asset note:** The supplied message contained the Markdown text but did not include the original `assets/MapLayout01.png`–`assets/MapLayout16.png` files. Their relative references are preserved exactly, but those source images could not be copied into this package or verified. Add the original PNGs to `component/assets/` in the repository to make those legacy references resolve. The four new SVG comparison graphics are included in this package.
+**Asset note:** The six comparison image references point to the files uploaded to `component/assets/`: `Maplayout_Failed1.jpg`, `Maplayout_Failed2.jpg`, `Maplayout_Failed3.jpg`, `Maplayout_Preferred1.jpg`, `Maplayout_Preferred2jpg.png`, and `Maplayout_Preferred3.jpg`. The second preferred image filename includes the `.png.png` suffix shown in the repository upload screenshot; the Markdown reference preserves that exact filename. The original `MapLayout01.png`–`MapLayout16.png` references are also preserved.
