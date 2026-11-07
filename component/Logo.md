@@ -191,7 +191,7 @@ Examples shown:
 
 #### Example 1: Static data visualization with a branded footer
 
-![Example of a static Census Bureau data visualization with a distinct footer containing the Census Bureau logo, Department of Commerce identification, and source information.](component/assets/census-logo-visualization1.jpeg)
+![Example of a static Census Bureau data visualization with a distinct footer containing the Census Bureau logo, Department of Commerce identification, and source information.](assets/census-logo-visualization1.jpeg)
 
 This manufacturing pay chart demonstrates how agency identification and source information can be placed in a dedicated footer below the data-display area. The logo and Department of Commerce identification are visually separated from the chart, while the source statement appears on the opposite side of the footer. The chart also retains its title, measure, units, explanatory note, and data source information above the footer.
 
@@ -203,7 +203,7 @@ This manufacturing pay chart demonstrates how agency identification and source i
 
 #### Example 2: Interactive dashboard with a persistent branded footer
 
-![Example of an interactive Census Bureau dashboard with filter controls, a multi-category visualization, and a footer containing agency identification and source information.](component/assets/census-logo-visualization2.png)
+![Example of an interactive Census Bureau dashboard with filter controls, a multi-category visualization, and a footer containing agency identification and source information.](assets/census-logo-visualization2.png)
 
 This income distribution dashboard demonstrates how agency identification can remain visible in an interactive product with filters and a larger visualization area. The filter panel is separated from the chart, and the footer places the Census Bureau identification on the left and source information on the right. The dark footer also provides a consistent visual boundary between the dashboard content and its attribution.
 
