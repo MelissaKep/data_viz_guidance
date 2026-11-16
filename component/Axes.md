@@ -2,7 +2,7 @@
 layout: default
 title: Axes
 permalink: axes.html
-description: "Guidance for designing and labeling chart axes, scales, and tick marks to support accurate, readable, and consistent data visualizations."
+description: "Best practices for designing and labeling chart axes to improve readability, accuracy, and interpretation of data visualizations."
 ---
 
 # Axes
