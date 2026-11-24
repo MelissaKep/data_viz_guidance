@@ -1,3 +1,4 @@
+
 ---
 ---
 <!DOCTYPE html>
@@ -5,13 +6,16 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    
-<link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
-    
+
+    <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+
     <style>
       /* Sidebar styles that complement Cayman */
-      body { margin-left: 240px; background-color: #fff; }
-      
+      body {
+        margin-left: 240px;
+        background-color: #fff;
+      }
+
       .custom-sidebar {
         position: fixed;
         left: 0;
@@ -25,14 +29,47 @@
         overflow-y: auto;
       }
 
-      .custom-sidebar h3 { font-size: 1.1rem; color: #159957; margin-bottom: 20px; text-transform: uppercase; letter-spacing: 1px; }
-      .custom-sidebar ul { list-style: none; margin: 0; padding: 0; }
-      .custom-sidebar li { margin-bottom: 15px; }
-      .custom-sidebar a { text-decoration: none; color: #1e6bb8; font-size: 0.95rem; }
-      .custom-sidebar a:hover { text-decoration: underline; }
-      
-      .category-title { color: #2e3532; font-weight: bold; display: block; margin-top: 25px; margin-bottom: 8px; font-size: 0.9rem; }
-      .sub-menu { margin-left: 15px !important; margin-top: 5px !important; }
+      .custom-sidebar h3 {
+        font-size: 1.1rem;
+        color: #159957;
+        margin-bottom: 20px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+      }
+
+      .custom-sidebar ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+      }
+
+      .custom-sidebar li {
+        margin-bottom: 15px;
+      }
+
+      .custom-sidebar a {
+        text-decoration: none;
+        color: #1e6bb8;
+        font-size: 0.95rem;
+      }
+
+      .custom-sidebar a:hover {
+        text-decoration: underline;
+      }
+
+      .category-title {
+        color: #2e3532;
+        font-weight: bold;
+        display: block;
+        margin-top: 25px;
+        margin-bottom: 8px;
+        font-size: 0.9rem;
+      }
+
+      .sub-menu {
+        margin-left: 15px !important;
+        margin-top: 5px !important;
+      }
 
       /* Horizontal Tag Bar Styles */
       .tag-bar {
@@ -43,6 +80,7 @@
         align-items: center;
         flex-wrap: wrap;
       }
+
       .tag-bar-label {
         font-size: 0.8rem;
         font-weight: bold;
@@ -50,6 +88,7 @@
         margin-right: 15px;
         text-transform: uppercase;
       }
+
       .tag-link {
         display: inline-block;
         background: #159957;
@@ -63,31 +102,55 @@
         text-decoration: none !important;
         transition: background 0.2s;
       }
-      .tag-link:hover { background: #1e6bb8; }
+
+      .tag-link:hover {
+        background: #1e6bb8;
+      }
 
       /* Responsiveness for mobile */
       @media (max-width: 800px) {
-        body { margin-left: 0; }
-        .custom-sidebar { position: relative; width: 100%; height: auto; border-right: none; border-bottom: 1px solid #e5e5e5; }
-        .main-content { padding: 2rem 1rem; }
-        .tag-bar { justify-content: center; }
+        body {
+          margin-left: 0;
+        }
+
+        .custom-sidebar {
+          position: relative;
+          width: 100%;
+          height: auto;
+          border-right: none;
+          border-bottom: 1px solid #e5e5e5;
+        }
+
+        .main-content {
+          padding: 2rem 1rem;
+        }
+
+        .tag-bar {
+          justify-content: center;
+        }
       }
     </style>
   </head>
+
   <body>
 
+    <!-- Sidebar Navigation -->
     <div class="custom-sidebar">
       <h3>Menu</h3>
       <ul>
-        <li><a href="{{ site.baseurl }}/" style="font-weight: bold;">Home</a></li>
-        
+        <li>
+          <a href="{{ site.baseurl }}/" style="font-weight: bold;">Home</a>
+        </li>
+
         {% for category in site.navigation %}
           <li>
             <span class="category-title">{{ category.title }}</span>
             <ul class="sub-menu">
               {% for link in category.sub_pages %}
                 <li>
-                  <a href="{{ site.baseurl }}/{{ link.url }}.html">{{ link.title }}</a>
+                  <a href="{{ site.baseurl }}/{{ link.url }}.html">
+                    {{ link.title }}
+                  </a>
                 </li>
               {% endfor %}
             </ul>
@@ -96,58 +159,118 @@
       </ul>
     </div>
 
+    <!-- Main Website Header -->
     <header class="page-header" role="banner">
-      <h1 class="project-name">{{ site.title | default: site.github.repository_name }}</h1>
-      <h2 class="project-tagline">{{ site.description | default: site.github.project_tagline }}</h2>
+      <h1 class="project-name">
+        {{ site.title | default: site.github.repository_name }}
+      </h1>
+
+      <h2 class="project-tagline">
+        {{ site.description | default: site.github.project_tagline }}
+      </h2>
     </header>
 
-    <!-- STEP 3: Horizontal Tag Bar under Banner -->
+    <!-- Horizontal Tag Bar -->
     <nav class="tag-bar">
-  <span class="tag-bar-label">Explore Tags:</span>
-  
-  {% comment %} 
-    Initialize an empty array and cleanly concatenate every page's tags to it.
-  {% endcomment %}
-  {% assign all_tags = "" | split: "" %}
-  
-  {% for p in site.pages %}
-    {% if p.tags %}
-      {% assign all_tags = all_tags | concat: p.tags %}
-    {% endif %}
-  {% endfor %}
-  
-  {% comment %} 
-    Now deduplicate and sort the cleanly flattened array.
-  {% endcomment %}
-  {% assign all_tags = all_tags | uniq | sort %}
-  
-  {% for tag_name in all_tags %}
-    {% if tag_name != "" and tag_name != nil %}
-      <a href="{{ site.baseurl }}/tags/{{ tag_name | slugify }}/" class="tag-link">
-        {{ tag_name }}
-      </a>
-    {% endif %}
-  {% endfor %}
-</nav>
+      <span class="tag-bar-label">Explore Tags:</span>
 
+      {% comment %}
+        Initialize an empty array and collect every page's tags.
+      {% endcomment %}
+      {% assign all_tags = "" | split: "" %}
+
+      {% for p in site.pages %}
+        {% if p.tags %}
+          {% assign all_tags = all_tags | concat: p.tags %}
+        {% endif %}
+      {% endfor %}
+
+      {% comment %}
+        Deduplicate and sort the collected tags.
+      {% endcomment %}
+      {% assign all_tags = all_tags | uniq | sort %}
+
+      {% for tag_name in all_tags %}
+        {% if tag_name != "" and tag_name != nil %}
+          <a href="{{ site.baseurl }}/tags/{{ tag_name | slugify }}/"
+             class="tag-link">
+            {{ tag_name }}
+          </a>
+        {% endif %}
+      {% endfor %}
+    </nav>
+
+    <!-- Main Content -->
     <main id="content" class="main-content" role="main">
-      
-      <!-- Individual Page Tags (Optional: shows tags specific to this page) -->
+
+      <!-- Individual Page Tags -->
       {% if page.tags %}
-        <div class="page-tags" style="margin-bottom: 20px; font-style: italic; font-size: 0.9rem;">
+        <div class="page-tags"
+             style="margin-bottom: 20px; font-style: italic; font-size: 0.9rem;">
           Tagged as: {{ page.tags | join: ", " }}
         </div>
       {% endif %}
 
       {{ content }}
-      
+
+      <!-- Website Footer -->
       <footer class="site-footer">
-        <span class="site-footer-owner">Site maintained by the Quality Program Staff</span>
+        <span class="site-footer-owner">
+          Site maintained by the Quality Program Staff
+        </span>
       </footer>
+
     </main>
 
     <!-- Download functionality for Python, Jupyter, and other files -->
     <script src="{{ '/assets/js/download.js' | relative_url }}" defer></script>
-    
+
+    <!-- ====================================================== -->
+    <!-- DocsGPT AI Visualization Guidance Assistant              -->
+    <!-- ====================================================== -->
+
+    <script src="https://unpkg.com/docsgpt@0.13.0/dist/legacy/browser.js"></script>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+
+        renderDocsGPTWidget("docsgpt-chat", {
+          apiHost: "https://gptcloud.arc53.com",
+
+          // Replace with your rotated, published DocsGPT agent key
+          apiKey: "eb6dfca4-cf2f-43a1-9b41-af6b37b6d86d",
+
+          title: "Visualization Guidance Assistant",
+          description: "AI assistance for Census data visualization",
+
+          heroTitle: "How can I help you visualize your data?",
+          heroDescription:
+            "Ask about visualization standards, Census data, Python, R, accessibility, or chart selection.",
+
+          suggestedQuestions: [
+            "Which visualization is best for my analytical question?",
+            "How do I create a choropleth map using Census data?",
+            "Show me an example using Python",
+            "What accessibility standards should I follow?"
+          ],
+
+          suggestedQuestionsLabel: "Try asking",
+
+          theme: "light",
+          buttonText: "Ask the AI Assistant",
+          buttonBg: "#1F4E79",
+
+          size: "medium",
+          layout: "floating",
+
+          showSources: true,
+          collectFeedback: true,
+          persistConversations: true,
+          poweredBy: true
+        });
+
+      });
+    </script>
+
   </body>
 </html>
