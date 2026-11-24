@@ -3,7 +3,7 @@ layout: default
 title: Map Layout
 permalink: maplayout.html
 description: "Developer guidance for designing accurate, accessible, and effective maps with Census Bureau data, including geographic extent, map projections, scale, insets, labeling, and interactive map layouts."
-tags: [geospatial]
+tags: [Geospatial]
 ---
 
 # Map Layout
