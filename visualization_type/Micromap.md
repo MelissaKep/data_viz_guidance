@@ -2,7 +2,7 @@
 layout: default
 title: Micromaps
 permalink: micromap.html
-tags: [Distribution, Geospatial]
+tags: [Distribution,Geospatial]
 description: "Short Description of Micromaps"
 ---
 
