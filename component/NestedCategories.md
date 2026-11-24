@@ -2,7 +2,7 @@
 layout: default
 title: Nested or Non-Mutually Exclusive Categories 
 permalink: nested.html
-tags: [Comparison, Distribution]
+tags: [Comparison,Distribution]
 description: "Short Description of Nested or Non-Mutually Exclusive Categories"
 ---
 
