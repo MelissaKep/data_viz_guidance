@@ -2,7 +2,7 @@
 layout: default
 title: Bubble Chart
 permalink: bubblechart.html
-tags: [Distribution, Correlation]
+tags: [Distribution,Correlation]
 description: "Short Description of Bubble Chart"
 ---
 
