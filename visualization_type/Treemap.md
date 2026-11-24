@@ -2,7 +2,7 @@
 layout: default
 title: Treemap
 permalink: treemap.html
-tags: [Distribution, Comparison]
+tags: [Distribution,Comparison]
 description: "Short Description of Treemap"
 ---
 
