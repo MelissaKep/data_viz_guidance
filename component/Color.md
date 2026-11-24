@@ -2,6 +2,7 @@
 layout: default
 title: Color 
 permalink: color.html
+Tags: [Accessibility]
 description: "Guidance for selecting accessible color palettes for data visualizations, including sequential, qualitative, and diverging color schemes."
 ---
 
