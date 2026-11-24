@@ -2,7 +2,7 @@
 layout: default
 title: Proportional Symbol Map
 permalink: proportionalsymbolmap.html
-tags: [Comparison, Distribution, Geospatial]
+tags: [Comparison,Distribution,Geospatial]
 description: "Guidance for designing, interpreting, and implementing proportional and graduated symbol maps"
 ---
 
