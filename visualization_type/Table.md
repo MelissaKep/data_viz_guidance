@@ -2,7 +2,7 @@
 layout: default
 title: Tables
 permalink: table.html
-tags: [Comparison, Distribution]
+tags: [Comparison,Distribution]
 description: "Use tables to present precise numerical values, detailed categories, and information that readers need to compare or look up directly."
 ---
 
