@@ -2,7 +2,7 @@
 layout: default
 title: Dot Plot Chart
 permalink: dotplotchart.html
-tags: [Distribution, Comparison]
+tags: [Distribution,Comparison]
 description: "Use dot plots to display distributions or compare values across categories while emphasizing individual observations or values."
 ---
 
