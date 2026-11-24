@@ -3,7 +3,7 @@ layout: default
 title: Titles and Subtitles
 permalink: title.html
 description: "Developer guidance for writing clear, accurate, and accessible titles and subtitles for Census data visualizations."
-tags: [accessibility, informational]
+tags: [Accessibility, Informational]
 ---
 
 # Titles and Subtitles
