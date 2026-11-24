@@ -2,7 +2,7 @@
 layout: default
 title: Boxplot
 permalink: boxplot.html
-tags: [Distribution, Comparison]
+tags: [Distribution,Comparison]
 description: "Short Description of Boxplot"
 ---
 
