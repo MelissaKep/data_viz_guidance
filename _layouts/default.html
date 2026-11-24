@@ -229,16 +229,26 @@
     <!-- DocsGPT AI Visualization Guidance Assistant              -->
     <!-- ====================================================== -->
 
+    <!-- DocsGPT Widget Container -->
+    <div id="docsgpt-chat"></div>
+
+    <!-- Load DocsGPT Widget Library -->
     <script src="https://unpkg.com/docsgpt@0.13.0/dist/legacy/browser.js"></script>
 
+    <!-- Initialize DocsGPT Widget -->
     <script>
-      document.addEventListener("DOMContentLoaded", function () {
+      window.addEventListener("load", function () {
+
+        if (typeof renderDocsGPTWidget !== "function") {
+          console.error("DocsGPT widget library failed to load.");
+          return;
+        }
 
         renderDocsGPTWidget("docsgpt-chat", {
           apiHost: "https://gptcloud.arc53.com",
 
-          // Replace with your rotated, published DocsGPT agent key
-          apiKey: "eb6dfca4-cf2f-43a1-9b41-af6b37b6d86d",
+          // Use your rotated, published DocsGPT agent API key
+          apiKey: "YOUR_ROTATED_AGENT_KEY",
 
           title: "Visualization Guidance Assistant",
           description: "AI assistance for Census data visualization",
